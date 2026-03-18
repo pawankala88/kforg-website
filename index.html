@@ -1,180 +1,131 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KFO Command</title>
+<title>KFO COMMAND</title>
 
 <style>
 body {
-    margin: 0;
-    font-family: 'Courier New', monospace;
-    color: #00ff88;
-    background: black;
-    overflow-x: hidden;
+    margin:0;
+    font-family: monospace;
+    background:black;
+    color:#00ff88;
 }
 
-/* 🟢 Radar background */
-body::before {
-    content: "";
-    position: fixed;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(0,255,136,0.15) 1px, transparent 1px);
-    background-size: 40px 40px;
-    animation: moveBg 10s linear infinite;
+/* RADAR */
+.radar {
+    width:200px;
+    height:200px;
+    border:2px solid #00ff88;
+    border-radius:50%;
+    margin:auto;
+    position:relative;
 }
-@keyframes moveBg {
-    from { transform: translate(0,0); }
-    to { transform: translate(-40px, -40px); }
+.radar::after {
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    border-radius:50%;
+    border:2px solid #00ff88;
+    animation:pulse 2s infinite;
 }
-
-/* 🔍 Scan Line */
-.scan {
-    position: fixed;
-    width: 100%;
-    height: 2px;
-    background: #00ff88;
-    animation: scan 4s infinite;
-}
-@keyframes scan {
-    0% { top: 0 }
-    100% { top: 100% }
+@keyframes pulse {
+    from {transform:scale(1); opacity:1;}
+    to {transform:scale(1.5); opacity:0;}
 }
 
-/* HEADER */
-header {
-    text-align: center;
-    padding: 20px;
+/* MAP */
+.map {
+    height:200px;
+    border:1px solid #00ff88;
+    margin:20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 }
 
-/* TYPEWRITER */
-.typing {
-    border-right: 2px solid #00ff88;
-    white-space: nowrap;
-    overflow: hidden;
-    width: 0;
-    animation: typing 4s steps(30) forwards, blink 1s infinite;
+/* LOGIN */
+.login {
+    text-align:center;
+    margin-top:20px;
 }
-@keyframes typing {
-    to { width: 350px; }
-}
-@keyframes blink {
-    50% { border-color: transparent; }
-}
-
-/* NAV */
-nav {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    border-top: 1px solid #00ff88;
-    border-bottom: 1px solid #00ff88;
-    padding: 10px;
-}
-nav a {
-    color: #00ff88;
-    text-decoration: none;
-}
-nav a:hover {
-    text-shadow: 0 0 10px #00ff88;
-}
-
-/* HERO */
-.hero {
-    text-align: center;
-    padding: 100px 20px;
-}
-.hero h1 {
-    font-size: 50px;
-    text-shadow: 0 0 20px #00ff88;
-}
-
-/* CARD */
-.card {
-    border: 1px solid #00ff88;
-    padding: 20px;
-    margin: 15px auto;
-    width: 280px;
-    transition: 0.3s;
-}
-.card:hover {
-    box-shadow: 0 0 20px #00ff88;
-    transform: scale(1.05);
+input {
+    padding:10px;
+    margin:5px;
+    background:black;
+    color:#00ff88;
+    border:1px solid #00ff88;
 }
 
 /* BUTTON */
-.btn {
-    padding: 10px 25px;
-    border: 1px solid #00ff88;
-    color: #00ff88;
-    text-decoration: none;
-}
-.btn:hover {
-    background: #00ff88;
-    color: black;
+button {
+    padding:10px 20px;
+    background:#00ff88;
+    border:none;
 }
 
-/* FOOTER */
-footer {
-    text-align: center;
-    padding: 15px;
-    border-top: 1px solid #00ff88;
+/* HIDDEN PANEL */
+.secret {
+    display:none;
+    text-align:center;
+    margin-top:20px;
 }
 </style>
+
 </head>
 
 <body>
 
-<div class="scan"></div>
+<h1 style="text-align:center;">KFO COMMAND</h1>
 
-<header>
-<div class="typing">KALA FORCE ORGANIZATION COMMAND</div>
-</header>
+<!-- RADAR -->
+<div class="radar"></div>
 
-<nav>
-<a href="#">HOME</a>
-<a href="#about">ABOUT</a>
-<a href="#join">JOIN</a>
-<a href="#contact">CONTACT</a>
-<a href="https://instagram.com/thekalaforceofficial__" target="_blank">INSTAGRAM</a>
-</nav>
-
-<div class="hero">
-<h1>KFO UNIT</h1>
-<p>⚡ DEFENCE | UNITY | DISCIPLINE ⚡</p>
+<!-- MAP -->
+<div class="map">
+🛰️ TRACKING AREA ACTIVE
 </div>
 
-<div id="about" style="text-align:center;">
-<h2>COMMAND STRUCTURE</h2>
-
-<div class="card">FOUNDER<br>Pawan Choudhary</div>
-<div class="card">HEAD<br>Karan Choudhary</div>
-<div class="card">SECRETARY<br>Ritesh Tolani<br>Naveen Rao</div>
-<div class="card">HONORABLE MEMBER<br>Piyush Yadav</div>
-
+<!-- LOGIN -->
+<div class="login">
+<h3>SECURE ACCESS</h3>
+<input type="password" id="pass" placeholder="Enter Code">
+<br>
+<button onclick="login()">Enter</button>
 </div>
 
-<div id="join" style="text-align:center;">
-<h2>RECRUITMENT</h2>
-<p>Physical examination required</p>
-<p>Reservation: SC / ST / OBC</p>
-</div>
+<!-- SECRET -->
+<div class="secret" id="secret">
+<h2>ACCESS GRANTED ✅</h2>
+<p>Welcome to KFO Internal System</p>
 
-<div id="contact" style="text-align:center;">
-<h2>CONTACT</h2>
-<p>kala2006@gmail.com</p>
-<p>888809999</p>
-<p>Jodhpur, Rajasthan</p>
-
-<a class="btn" href="https://instagram.com/thekalaforceofficial__" target="_blank">
-FOLLOW INSTAGRAM
+<a href="https://instagram.com/thekalaforceofficial__" target="_blank">
+Follow Instagram
 </a>
 </div>
 
-<footer>
-© KFO COMMAND SYSTEM 🚀
-</footer>
+<script>
+function login(){
+    let p = document.getElementById("pass").value;
+    if(p === "kfo123"){
+        document.getElementById("secret").style.display="block";
+        beep();
+    } else {
+        alert("ACCESS DENIED ❌");
+    }
+}
+
+/* SOUND */
+function beep(){
+    let ctx = new (window.AudioContext || window.webkitAudioContext)();
+    let osc = ctx.createOscillator();
+    osc.type="sine";
+    osc.frequency.setValueAtTime(800, ctx.currentTime);
+    osc.connect(ctx.destination);
+    osc.start();
+    osc.stop(ctx.currentTime + 0.2);
+}
+</script>
 
 </body>
 </html>
