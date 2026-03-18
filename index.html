@@ -8,105 +8,141 @@
 <style>
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
-    color: #111;
+    font-family: 'Segoe UI', sans-serif;
+    color: white;
+    overflow-x: hidden;
+    background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #000000);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+}
+
+/* 🌈 Background Animation */
+@keyframes gradient {
+    0% { background-position: 0% }
+    50% { background-position: 100% }
+    100% { background-position: 0% }
+}
+
+/* 🌸 Flowers */
+.flower {
+    position: fixed;
+    top: -50px;
+    font-size: 20px;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    to { transform: translateY(100vh); opacity: 0; }
 }
 
 /* HEADER */
 header {
     text-align: center;
     padding: 20px;
+    backdrop-filter: blur(10px);
 }
 
-/* LOGO */
-.logo {
-    width: 80px;
-}
-
-/* NAVBAR */
+/* NAV */
 nav {
     display: flex;
     justify-content: center;
     gap: 20px;
-    background: #111;
+    background: rgba(0,0,0,0.6);
     padding: 12px;
+    backdrop-filter: blur(10px);
 }
 
 nav a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    transition: 0.3s;
 }
 
 nav a:hover {
-    color: #e1306c;
+    color: #00f2ff;
 }
 
 /* HERO */
 .hero {
     text-align: center;
-    padding: 80px 20px;
+    padding: 100px 20px;
+    animation: fadeIn 2s;
 }
 
 .hero h1 {
-    font-size: 42px;
+    font-size: 50px;
+    text-shadow: 0 0 20px #00f2ff;
 }
 
-.hero p {
-    color: #444;
-}
-
-/* SECTION */
+/* SECTIONS */
 .section {
-    padding: 50px 20px;
+    padding: 60px 20px;
     text-align: center;
 }
 
-/* CARD */
+/* GLASS CARD */
 .card {
-    background: rgba(255,255,255,0.6);
-    backdrop-filter: blur(10px);
+    background: rgba(255,255,255,0.1);
+    border-radius: 15px;
     padding: 20px;
     margin: 15px auto;
     width: 280px;
-    border-radius: 15px;
+    backdrop-filter: blur(15px);
     transition: 0.3s;
 }
 
 .card:hover {
-    transform: scale(1.05);
+    transform: scale(1.08);
+    box-shadow: 0 0 25px #00f2ff;
 }
 
 /* BUTTON */
 .btn {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 12px 25px;
-    background: #e1306c;
+    padding: 12px 30px;
+    background: linear-gradient(45deg, #00f2ff, #ff00ff);
+    border: none;
+    border-radius: 30px;
     color: white;
     text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    box-shadow: 0 0 20px #00f2ff;
 }
 
 /* FOOTER */
 footer {
-    background: #111;
-    color: white;
     text-align: center;
-    padding: 15px;
+    padding: 20px;
+    background: rgba(0,0,0,0.7);
+}
+
+/* FADE */
+@keyframes fadeIn {
+    from {opacity:0}
+    to {opacity:1}
 }
 </style>
-
 </head>
 
 <body>
 
+<!-- 🌸 FLOWERS -->
+<script>
+for (let i = 0; i < 25; i++) {
+    let f = document.createElement("div");
+    f.className = "flower";
+    f.innerHTML = "🌸";
+    f.style.left = Math.random()*100 + "vw";
+    f.style.animationDuration = (5 + Math.random()*5) + "s";
+    document.body.appendChild(f);
+}
+</script>
+
 <header>
-    <!-- 👉 Yaha apna logo add karo -->
-    <img src="https://via.placeholder.com/80" class="logo">
-    <h2>KFO - Kala Force Organization</h2>
+<h2>KFO - Kala Force Organization</h2>
 </header>
 
 <nav>
@@ -118,64 +154,40 @@ footer {
 </nav>
 
 <div class="hero">
-<h1>Kala Force Organization (KFO)</h1>
-<p>Student Power | Unity | College Memories</p>
+<h1>KALA FORCE ORGANIZATION</h1>
+<p>⚡ Student Power | Unity | Memories ⚡</p>
 </div>
 
-<!-- ABOUT -->
 <div class="section" id="about">
 <h2>About KFO</h2>
-<p>
-KFO is a student organization where students capture college memories, build unity, and grow together.
-</p>
+<p>KFO is a student organization capturing the best moments of college life.</p>
 
-<div class="card">
-<h3>Founder</h3>
-<p>Pawan Choudhary</p>
-</div>
-
-<div class="card">
-<h3>Head</h3>
-<p>Karan Choudhary</p>
-</div>
-
-<div class="card">
-<h3>Secretary</h3>
-<p>Ritesh Tolani</p>
-<p>Naveen Rao</p>
-</div>
-
-<div class="card">
-<h3>Honorable Member</h3>
-<p>Piyush Yadav </p>
-<p>mohit saini and many more  </p>
-</div>
-
+<div class="card">Founder<br>Pawan Choudhary</div>
+<div class="card">Head<br>Karan Choudhary</div>
+<div class="card">Secretary<br>Ritesh Tolani<br>Naveen Rao</div>
+<div class="card">Honorable Member<br>Piyush Yadav</div>
 
 </div>
 
-<!-- JOIN -->
 <div class="section" id="join">
-<h2>How to Join</h2>
-<p>Join KFO after clearing physical examination.</p>
-<p>Reservation available for SC, ST, OBC categories.</p>
+<h2>Join KFO</h2>
+<p>Join after physical examination.</p>
+<p>Reservation for SC / ST / OBC available.</p>
 </div>
 
-<!-- CONTACT -->
 <div class="section" id="contact">
 <h2>Contact</h2>
 <p>Email: kala2006@gmail.com</p>
 <p>Mobile: 888809999</p>
-<p>Address: Jodhpur, Rajasthan</p>
+<p>Jodhpur, Rajasthan</p>
 
 <a class="btn" href="https://instagram.com/thekalaforceofficial__" target="_blank">
 Follow on Instagram
 </a>
-
 </div>
 
 <footer>
-© 2026 KFO | Kala Force Organization
+© 2026 KFO 🚀
 </footer>
 
 </body>
