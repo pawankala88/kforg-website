@@ -9,70 +9,91 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #0a0a0a;
-    color: white;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    color: #111;
 }
 
+/* HEADER */
 header {
-    background: black;
-    padding: 20px;
     text-align: center;
-    font-size: 28px;
-    font-weight: bold;
-    letter-spacing: 2px;
+    padding: 20px;
 }
 
+/* LOGO */
+.logo {
+    width: 80px;
+}
+
+/* NAVBAR */
 nav {
     display: flex;
     justify-content: center;
     gap: 20px;
     background: #111;
-    padding: 10px;
+    padding: 12px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
+    font-weight: bold;
 }
 
+nav a:hover {
+    color: #e1306c;
+}
+
+/* HERO */
 .hero {
     text-align: center;
     padding: 80px 20px;
 }
 
 .hero h1 {
-    font-size: 40px;
+    font-size: 42px;
 }
 
 .hero p {
-    color: #aaa;
+    color: #444;
 }
 
+/* SECTION */
 .section {
     padding: 50px 20px;
     text-align: center;
 }
 
+/* CARD */
 .card {
-    background: #111;
+    background: rgba(255,255,255,0.6);
+    backdrop-filter: blur(10px);
     padding: 20px;
-    margin: 10px auto;
-    width: 300px;
-    border-radius: 10px;
+    margin: 15px auto;
+    width: 280px;
+    border-radius: 15px;
+    transition: 0.3s;
 }
 
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* BUTTON */
 .btn {
     display: inline-block;
-    margin-top: 10px;
-    padding: 10px 20px;
+    margin-top: 15px;
+    padding: 12px 25px;
     background: #e1306c;
     color: white;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 8px;
+    font-weight: bold;
 }
 
+/* FOOTER */
 footer {
-    background: black;
+    background: #111;
+    color: white;
     text-align: center;
     padding: 15px;
 }
@@ -82,14 +103,18 @@ footer {
 
 <body>
 
-<header>KFO - Kala Force Organization</header>
+<header>
+    <!-- 👉 Yaha apna logo add karo -->
+    <img src="https://via.placeholder.com/80" class="logo">
+    <h2>KFO - Kala Force Organization</h2>
+</header>
 
 <nav>
 <a href="#">Home</a>
 <a href="#about">About</a>
 <a href="#join">Join</a>
 <a href="#contact">Contact</a>
-<a href="https://instagram.com/thekalaforceofficial_" target="_blank">Instagram</a>
+<a href="https://instagram.com/thekalaforceofficial__" target="_blank">Instagram</a>
 </nav>
 
 <div class="hero">
@@ -97,12 +122,11 @@ footer {
 <p>Student Power | Unity | College Memories</p>
 </div>
 
-<!-- ABOUT SECTION -->
+<!-- ABOUT -->
 <div class="section" id="about">
 <h2>About KFO</h2>
 <p>
-KFO (Kala Force Organization) is a student organization where students capture
-the best memories of college life, build unity, and grow together.
+KFO is a student organization where students capture college memories, build unity, and grow together.
 </p>
 
 <div class="card">
@@ -128,27 +152,22 @@ the best memories of college life, build unity, and grow together.
 
 </div>
 
-<!-- JOIN SECTION -->
+<!-- JOIN -->
 <div class="section" id="join">
-<h2>How to Join KFO</h2>
-<p>
-You can join Kala Force Organization after clearing a physical examination.
-</p>
-
-<p>
-There is reservation available in KFO for SC, ST, and OBC categories.
-</p>
+<h2>How to Join</h2>
+<p>Join KFO after clearing physical examination.</p>
+<p>Reservation available for SC, ST, OBC categories.</p>
 </div>
 
 <!-- CONTACT -->
 <div class="section" id="contact">
-<h2>Contact Us</h2>
+<h2>Contact</h2>
 <p>Email: kala2006@gmail.com</p>
 <p>Mobile: 888809999</p>
 <p>Address: Jodhpur, Rajasthan</p>
 
-<a href="https://instagram.com/thekalaforceofficial__" target="_blank">Instagram</a>
-Follow us on Instagram
+<a class="btn" href="https://instagram.com/thekalaforceofficial__" target="_blank">
+Follow on Instagram
 </a>
 
 </div>
