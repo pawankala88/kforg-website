@@ -3,37 +3,43 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KFO - Kala Force Organization</title>
+<title>KFO Command</title>
 
 <style>
 body {
     margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    color: white;
+    font-family: 'Courier New', monospace;
+    color: #00ff88;
+    background: black;
     overflow-x: hidden;
-    background: linear-gradient(-45deg, #000000, #0f2027, #1a1a1a, #111);
-    background-size: 400% 400%;
-    animation: gradient 12s ease infinite;
 }
 
-/* 🌈 Background */
-@keyframes gradient {
-    0% { background-position: 0% }
-    50% { background-position: 100% }
-    100% { background-position: 0% }
-}
-
-/* 🏴 Floating V Animation */
-.vflag {
+/* 🟢 Radar background */
+body::before {
+    content: "";
     position: fixed;
-    top: -50px;
-    font-size: 20px;
-    animation: fall linear infinite;
-    opacity: 0.8;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0,255,136,0.15) 1px, transparent 1px);
+    background-size: 40px 40px;
+    animation: moveBg 10s linear infinite;
+}
+@keyframes moveBg {
+    from { transform: translate(0,0); }
+    to { transform: translate(-40px, -40px); }
 }
 
-@keyframes fall {
-    to { transform: translateY(100vh); opacity: 0; }
+/* 🔍 Scan Line */
+.scan {
+    position: fixed;
+    width: 100%;
+    height: 2px;
+    background: #00ff88;
+    animation: scan 4s infinite;
+}
+@keyframes scan {
+    0% { top: 0 }
+    100% { top: 100% }
 }
 
 /* HEADER */
@@ -42,38 +48,36 @@ header {
     padding: 20px;
 }
 
-/* 🔥 Text Transition */
-.header-text {
-    font-size: 28px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    animation: glowText 3s infinite alternate;
+/* TYPEWRITER */
+.typing {
+    border-right: 2px solid #00ff88;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation: typing 4s steps(30) forwards, blink 1s infinite;
 }
-
-@keyframes glowText {
-    from { text-shadow: 0 0 10px #00f2ff; }
-    to { text-shadow: 0 0 25px #ff00ff; }
+@keyframes typing {
+    to { width: 350px; }
+}
+@keyframes blink {
+    50% { border-color: transparent; }
 }
 
 /* NAV */
 nav {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    background: rgba(0,0,0,0.6);
-    padding: 12px;
-    backdrop-filter: blur(10px);
+    gap: 25px;
+    border-top: 1px solid #00ff88;
+    border-bottom: 1px solid #00ff88;
+    padding: 10px;
 }
-
 nav a {
-    color: white;
+    color: #00ff88;
     text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
 }
-
 nav a:hover {
-    color: #00f2ff;
+    text-shadow: 0 0 10px #00ff88;
 }
 
 /* HERO */
@@ -81,117 +85,95 @@ nav a:hover {
     text-align: center;
     padding: 100px 20px;
 }
-
 .hero h1 {
-    font-size: 48px;
-    text-shadow: 0 0 20px #00f2ff;
+    font-size: 50px;
+    text-shadow: 0 0 20px #00ff88;
 }
 
-/* SECTION */
-.section {
-    padding: 60px 20px;
-    text-align: center;
-}
-
-/* CARDS */
+/* CARD */
 .card {
-    background: rgba(255,255,255,0.08);
-    border-radius: 15px;
+    border: 1px solid #00ff88;
     padding: 20px;
     margin: 15px auto;
     width: 280px;
-    backdrop-filter: blur(15px);
     transition: 0.3s;
 }
-
 .card:hover {
-    transform: scale(1.08);
-    box-shadow: 0 0 20px #00f2ff;
+    box-shadow: 0 0 20px #00ff88;
+    transform: scale(1.05);
 }
 
 /* BUTTON */
 .btn {
-    padding: 12px 30px;
-    background: linear-gradient(45deg, #00f2ff, #ff00ff);
-    border-radius: 30px;
-    color: white;
+    padding: 10px 25px;
+    border: 1px solid #00ff88;
+    color: #00ff88;
     text-decoration: none;
 }
-
 .btn:hover {
-    box-shadow: 0 0 20px #00f2ff;
+    background: #00ff88;
+    color: black;
 }
 
 /* FOOTER */
 footer {
     text-align: center;
-    padding: 20px;
-    background: rgba(0,0,0,0.7);
+    padding: 15px;
+    border-top: 1px solid #00ff88;
 }
 </style>
 </head>
 
 <body>
 
-<!-- 🏴 V FLAG ANIMATION -->
-<script>
-for (let i = 0; i < 25; i++) {
-    let v = document.createElement("div");
-    v.className = "vflag";
-    v.innerHTML = "V🏴";
-    v.style.left = Math.random()*100 + "vw";
-    v.style.animationDuration = (5 + Math.random()*5) + "s";
-    document.body.appendChild(v);
-}
-</script>
+<div class="scan"></div>
 
 <header>
-<div class="header-text">KALA FORCE ORGANIZATION</div>
+<div class="typing">KALA FORCE ORGANIZATION COMMAND</div>
 </header>
 
 <nav>
-<a href="#">Home</a>
-<a href="#about">About</a>
-<a href="#join">Join</a>
-<a href="#contact">Contact</a>
-<a href="https://instagram.com/thekalaforceofficial__" target="_blank">Instagram</a>
+<a href="#">HOME</a>
+<a href="#about">ABOUT</a>
+<a href="#join">JOIN</a>
+<a href="#contact">CONTACT</a>
+<a href="https://instagram.com/thekalaforceofficial__" target="_blank">INSTAGRAM</a>
 </nav>
 
 <div class="hero">
-<h1>KFO</h1>
-<p>⚡ Student Power | Unity | Memories ⚡</p>
+<h1>KFO UNIT</h1>
+<p>⚡ DEFENCE | UNITY | DISCIPLINE ⚡</p>
 </div>
 
-<div class="section" id="about">
-<h2>About KFO</h2>
-<p>KFO is a student organization capturing the best college memories.</p>
+<div id="about" style="text-align:center;">
+<h2>COMMAND STRUCTURE</h2>
 
-<div class="card">Founder<br>Pawan Choudhary</div>
-<div class="card">Head<br>Karan Choudhary</div>
-<div class="card">Secretary<br>Ritesh Tolani<br>Naveen Rao</div>
-<div class="card">Honorable Member<br>Piyush Yadav</div>
+<div class="card">FOUNDER<br>Pawan Choudhary</div>
+<div class="card">HEAD<br>Karan Choudhary</div>
+<div class="card">SECRETARY<br>Ritesh Tolani<br>Naveen Rao</div>
+<div class="card">HONORABLE MEMBER<br>Piyush Yadav</div>
 
 </div>
 
-<div class="section" id="join">
-<h2>Join KFO</h2>
-<p>Join after physical examination.</p>
-<p>Reservation for SC / ST / OBC available.</p>
+<div id="join" style="text-align:center;">
+<h2>RECRUITMENT</h2>
+<p>Physical examination required</p>
+<p>Reservation: SC / ST / OBC</p>
 </div>
 
-<div class="section" id="contact">
-<h2>Contact</h2>
-<p>Email: kala2006@gmail.com</p>
-<p>Mobile: 888809999</p>
+<div id="contact" style="text-align:center;">
+<h2>CONTACT</h2>
+<p>kala2006@gmail.com</p>
+<p>888809999</p>
 <p>Jodhpur, Rajasthan</p>
 
 <a class="btn" href="https://instagram.com/thekalaforceofficial__" target="_blank">
-Follow on Instagram
+FOLLOW INSTAGRAM
 </a>
 </div>
 
 <footer>
-© 2026 KFO 🚀
+© KFO COMMAND SYSTEM 🚀
 </footer>
 
 </body>
