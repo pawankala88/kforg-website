@@ -62,13 +62,40 @@ button {
     padding:10px 20px;
     background:#00ff88;
     border:none;
+    cursor:pointer;
 }
 
-/* HIDDEN PANEL */
-.secret {
+/* POPUP */
+#popup {
     display:none;
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    background:black;
+    border:2px solid #00ff88;
+    padding:30px;
     text-align:center;
-    margin-top:20px;
+    z-index:1000;
+    box-shadow:0 0 25px #00ff88;
+}
+
+/* OVERLAY */
+#overlay {
+    display:none;
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    background:rgba(0,0,0,0.7);
+}
+
+/* FOOTER */
+footer {
+    text-align:center;
+    padding:15px;
+    border-top:1px solid #00ff88;
 }
 </style>
 
@@ -94,38 +121,54 @@ button {
 <button onclick="login()">Enter</button>
 </div>
 
-<!-- SECRET -->
-<div class="secret" id="secret">
-<h2>ACCESS GRANTED ✅</h2>
-<p>Welcome to KFO Internal System</p>
+<!-- OVERLAY -->
+<div id="overlay"></div>
 
-<a href="https://instagram.com/thekalaforceofficial__" target="_blank">
-Follow Instagram
+<!-- POPUP -->
+<div id="popup">
+<h2>ACCESS GRANTED ✅</h2>
+<p>Welcome to KFO Command System</p>
+
+<a href="https://instagram.com/thekalaforceofficial__" target="_blank" style="color:#00ff88;">
+Open Instagram
 </a>
+
+<br><br>
+<button onclick="closePopup()">Close</button>
 </div>
 
 <script>
 function login(){
     let p = document.getElementById("pass").value;
+
     if(p === "kfo123"){
-        document.getElementById("secret").style.display="block";
+        document.getElementById("popup").style.display="block";
+        document.getElementById("overlay").style.display="block";
         beep();
     } else {
         alert("ACCESS DENIED ❌");
     }
 }
 
+function closePopup(){
+    document.getElementById("popup").style.display="none";
+    document.getElementById("overlay").style.display="none";
+}
+
 /* SOUND */
 function beep(){
     let ctx = new (window.AudioContext || window.webkitAudioContext)();
     let osc = ctx.createOscillator();
-    osc.type="sine";
     osc.frequency.setValueAtTime(800, ctx.currentTime);
     osc.connect(ctx.destination);
     osc.start();
     osc.stop(ctx.currentTime + 0.2);
 }
 </script>
+
+<footer>
+© KFO COMMAND SYSTEM 🚀
+</footer>
 
 </body>
 </html>
