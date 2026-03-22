@@ -4,16 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>KFO - Kala Force Organization | Jodhpur, Rajasthan</title>
-<meta name="description" content="KFO - Kala Force Organization is a student organization in Jodhpur, Rajasthan. We capture college memories, build unity, and grow together.">
+<meta name="description" content="KFO - Kala Force Organization is a student organization in Jodhpur, Rajasthan.">
 <meta name="keywords" content="KFO, Kala Force Organization, Jodhpur, Rajasthan, student organization">
 <meta name="author" content="KFO - Kala Force Organization">
 <meta name="robots" content="index, follow">
-<meta name="theme-color" content="#050810">
-<meta property="og:type" content="website">
 <meta property="og:title" content="KFO - Kala Force Organization">
-<meta property="og:description" content="Student Power | Unity | Legacy. KFO is a student organization in Jodhpur, Rajasthan.">
 <meta property="og:url" content="https://pawankala88.github.io">
-<meta name="twitter:card" content="summary">
 <link rel="canonical" href="https://pawankala88.github.io">
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
@@ -31,62 +27,63 @@ header{display:flex;flex-direction:column;align-items:center;padding:26px 20px 1
 @keyframes sp{to{transform:rotate(360deg);}}
 header h2{font-family:'Orbitron',sans-serif;font-size:11px;letter-spacing:4px;color:var(--mt);text-transform:uppercase;}
 nav{display:flex;flex-wrap:wrap;justify-content:center;background:rgba(5,8,16,0.97);border-bottom:1px solid rgba(0,240,255,0.1);position:sticky;top:0;z-index:100;}
-nav a{color:var(--mt);text-decoration:none;font-family:'Orbitron',sans-serif;font-size:9px;letter-spacing:2px;padding:13px 14px;text-transform:uppercase;position:relative;transition:color 0.3s;cursor:pointer;}
+nav a{color:var(--mt);text-decoration:none;font-family:'Orbitron',sans-serif;font-size:9px;letter-spacing:2px;padding:13px 12px;text-transform:uppercase;position:relative;transition:color 0.3s;cursor:pointer;}
 nav a::after{content:'';position:absolute;bottom:0;left:50%;right:50%;height:2px;background:var(--red);transition:left 0.3s,right 0.3s;}
 nav a:hover{color:var(--cyan);}nav a:hover::after{left:8%;right:8%;}
 nav a.active-nav{color:var(--cyan);}nav a.active-nav::after{left:8%;right:8%;}
 .pg{display:none;}.pg.active{display:block;}
-/* HERO */
-.hbdg{font-family:'Orbitron',sans-serif;font-size:9px;letter-spacing:5px;color:var(--cyan);text-transform:uppercase;border:1px solid rgba(0,240,255,0.3);padding:5px 15px;border-radius:2px;margin-bottom:22px;position:relative;overflow:hidden;animation:badgeEntrance 1s ease 0.2s both,pb 3s ease 1.2s infinite;}
-@keyframes badgeEntrance{from{opacity:0;transform:translateY(-16px);}to{opacity:1;transform:translateY(0);}}
+.hero{text-align:center;padding:90px 20px 70px;display:flex;flex-direction:column;align-items:center;}
+.hbdg{font-family:'Orbitron',sans-serif;font-size:9px;letter-spacing:5px;color:var(--cyan);text-transform:uppercase;border:1px solid rgba(0,240,255,0.3);padding:5px 15px;border-radius:2px;margin-bottom:22px;position:relative;overflow:hidden;animation:badgeIn 1s ease 0.2s both,pb 3s ease 1.2s infinite;}
+@keyframes badgeIn{from{opacity:0;transform:translateY(-16px);}to{opacity:1;transform:translateY(0);}}
 @keyframes pb{0%,100%{box-shadow:0 0 0 rgba(0,240,255,0);}50%{box-shadow:0 0 18px rgba(0,240,255,0.45);}}
-.hbdg::after{content:'';position:absolute;top:0;left:-100%;width:55%;height:100%;background:linear-gradient(90deg,transparent,rgba(0,240,255,0.4),transparent);animation:scanSwipe 3.5s ease-in-out 1.2s infinite;}
-@keyframes scanSwipe{0%{left:-100%;}100%{left:200%;}}
-.hero h1{font-family:'Orbitron',sans-serif;font-size:clamp(28px,7vw,64px);font-weight:900;line-height:1.05;letter-spacing:2px;text-transform:uppercase;background:linear-gradient(135deg,#fff 0%,#00f0ff 30%,#e1306c 60%,#fff 90%);background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;position:relative;display:inline-block;animation:h1Enter 1s ease 0.5s both,gradShift 5s ease 1.5s infinite,h1Float 6s ease-in-out 1.5s infinite;}
-@keyframes h1Enter{from{opacity:0;transform:scale(0.85) translateY(20px);}to{opacity:1;transform:scale(1) translateY(0);}}
-@keyframes gradShift{0%{background-position:0% center;}50%{background-position:100% center;}100%{background-position:0% center;}}
-@keyframes h1Float{0%,100%{transform:translateY(0);}50%{transform:translateY(-10px);}}
+.hbdg::after{content:'';position:absolute;top:0;left:-100%;width:55%;height:100%;background:linear-gradient(90deg,transparent,rgba(0,240,255,0.4),transparent);animation:scan 3.5s ease-in-out 1.2s infinite;}
+@keyframes scan{0%{left:-100%;}100%{left:200%;}}
+.hero h1{font-family:'Orbitron',sans-serif;font-size:clamp(28px,7vw,64px);font-weight:900;line-height:1.05;letter-spacing:2px;text-transform:uppercase;background:linear-gradient(135deg,#fff 0%,#00f0ff 30%,#e1306c 60%,#fff 90%);background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;position:relative;display:inline-block;animation:h1In 1s ease 0.5s both,gradS 5s ease 1.5s infinite,h1F 6s ease-in-out 1.5s infinite;}
+@keyframes h1In{from{opacity:0;transform:scale(0.85) translateY(20px);}to{opacity:1;transform:scale(1) translateY(0);}}
+@keyframes gradS{0%{background-position:0% center;}50%{background-position:100% center;}100%{background-position:0% center;}}
+@keyframes h1F{0%,100%{transform:translateY(0);}50%{transform:translateY(-10px);}}
 .hero h1::before,.hero h1::after{content:attr(data-text);position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(135deg,#fff 0%,#00f0ff 30%,#e1306c 60%,#fff 90%);background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;pointer-events:none;}
-.hero h1::before{clip-path:polygon(0 0,100% 0,100% 35%,0 35%);animation:glitch1 6s infinite 1.5s;opacity:0;}
-.hero h1::after{clip-path:polygon(0 65%,100% 65%,100% 100%,0 100%);animation:glitch2 6s infinite 1.5s;opacity:0;}
-@keyframes glitch1{0%,88%,100%{transform:none;opacity:0;}89%{transform:translate(-4px,2px) skewX(-3deg);opacity:0.6;}91%{transform:translate(4px,-2px) skewX(3deg);opacity:0.6;}93%{transform:translate(-2px,1px);opacity:0.4;}95%{opacity:0;}}
-@keyframes glitch2{0%,88%,100%{transform:none;opacity:0;}89%{transform:translate(4px,-2px) skewX(3deg);opacity:0.6;}91%{transform:translate(-4px,2px) skewX(-3deg);opacity:0.6;}93%{transform:translate(2px,-1px);opacity:0.4;}95%{opacity:0;}}
-.hsub{margin-top:16px;font-size:15px;letter-spacing:5px;color:var(--mt);text-transform:uppercase;overflow:hidden;white-space:nowrap;border-right:2px solid rgba(0,240,255,0.7);width:0;animation:typeIn 2.5s steps(28) 1.2s forwards,cursorBlink 0.75s step-end 1.2s infinite;}
+.hero h1::before{clip-path:polygon(0 0,100% 0,100% 35%,0 35%);animation:g1 6s infinite 1.5s;opacity:0;}
+.hero h1::after{clip-path:polygon(0 65%,100% 65%,100% 100%,0 100%);animation:g2 6s infinite 1.5s;opacity:0;}
+@keyframes g1{0%,88%,100%{transform:none;opacity:0;}89%{transform:translate(-4px,2px) skewX(-3deg);opacity:0.6;}91%{transform:translate(4px,-2px) skewX(3deg);opacity:0.6;}93%{opacity:0.4;}95%{opacity:0;}}
+@keyframes g2{0%,88%,100%{transform:none;opacity:0;}89%{transform:translate(4px,-2px) skewX(3deg);opacity:0.6;}91%{transform:translate(-4px,2px) skewX(-3deg);opacity:0.6;}93%{opacity:0.4;}95%{opacity:0;}}
+.hsub{margin-top:16px;font-size:15px;letter-spacing:5px;color:var(--mt);text-transform:uppercase;overflow:hidden;white-space:nowrap;border-right:2px solid rgba(0,240,255,0.7);width:0;animation:typeIn 2.5s steps(28) 1.2s forwards,curB 0.75s step-end 1.2s infinite;}
 .hsub span{color:var(--red);text-shadow:0 0 12px var(--rg);}
 @keyframes typeIn{from{width:0;}to{width:100%;}}
-@keyframes cursorBlink{0%,100%{border-color:rgba(0,240,255,0.7);}50%{border-color:transparent;}}
-.hln{width:100px;height:2px;background:linear-gradient(90deg,transparent,var(--cyan),transparent);margin:28px auto 0;animation:lineGrow 1s ease 0.8s both,pl 3s ease 1.8s infinite;transform-origin:center;}
-@keyframes lineGrow{from{transform:scaleX(0);opacity:0;}to{transform:scaleX(1);opacity:1;}}
+@keyframes curB{0%,100%{border-color:rgba(0,240,255,0.7);}50%{border-color:transparent;}}
+.hln{width:100px;height:2px;background:linear-gradient(90deg,transparent,var(--cyan),transparent);margin:28px auto 0;animation:lgrow 1s ease 0.8s both,pl 3s ease 1.8s infinite;transform-origin:center;}
+@keyframes lgrow{from{transform:scaleX(0);opacity:0;}to{transform:scaleX(1);opacity:1;}}
 @keyframes pl{0%,100%{opacity:0.3;}50%{opacity:1;}}
-.cs{width:76px;height:76px;perspective:280px;margin:42px auto 0;animation:cubeEntrance 1s ease 1.8s both;}
-@keyframes cubeEntrance{from{opacity:0;transform:scale(0);}to{opacity:1;transform:scale(1);}}
+.cs{width:76px;height:76px;perspective:280px;margin:42px auto 0;animation:cIn 1s ease 1.8s both;}
+@keyframes cIn{from{opacity:0;transform:scale(0);}to{opacity:1;transform:scale(1);}}
 .cb{width:76px;height:76px;position:relative;transform-style:preserve-3d;animation:rc 12s linear 2.5s infinite;}
 @keyframes rc{to{transform:rotateX(360deg) rotateY(360deg);}}
 .fc{position:absolute;width:76px;height:76px;border:1px solid var(--cyan);background:rgba(0,240,255,0.04);display:flex;align-items:center;justify-content:center;font-family:'Orbitron',sans-serif;font-size:9px;color:rgba(0,240,255,0.6);letter-spacing:2px;}
 .fc.fn{transform:translateZ(38px);}.fc.bk{transform:rotateY(180deg) translateZ(38px);}
 .fc.lf{transform:rotateY(-90deg) translateZ(38px);}.fc.rt{transform:rotateY(90deg) translateZ(38px);}
 .fc.tp{transform:rotateX(90deg) translateZ(38px);}.fc.bt{transform:rotateX(-90deg) translateZ(38px);}
-.sn{font-family:'Orbitron',sans-serif;font-size:34px;font-weight:900;color:var(--cyan);display:block;animation:statGlow 3s ease-in-out infinite;}
-@keyframes statGlow{0%,100%{text-shadow:0 0 18px rgba(0,240,255,0.5);}50%{text-shadow:0 0 36px rgba(0,240,255,1),0 0 70px rgba(0,240,255,0.35);}}
-.sl{font-size:10px;letter-spacing:3px;color:var(--mt);text-transform:uppercase;}
 .sr{display:flex;flex-wrap:wrap;justify-content:center;gap:32px;padding:36px 20px;border-top:1px solid rgba(0,240,255,0.08);border-bottom:1px solid rgba(0,240,255,0.08);background:rgba(5,8,16,0.5);}
 .si{text-align:center;}
-.sec h2::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:linear-gradient(90deg,var(--red),var(--cyan));transition:width 1.2s ease 0.3s;}
-.sec.rv.on h2::after{width:100%;}
-.hero{text-align:center;padding:90px 20px 70px;display:flex;flex-direction:column;align-items:center;}
+.sn{font-family:'Orbitron',sans-serif;font-size:34px;font-weight:900;color:var(--cyan);display:block;animation:sG 3s ease-in-out infinite;}
+@keyframes sG{0%,100%{text-shadow:0 0 18px rgba(0,240,255,0.5);}50%{text-shadow:0 0 36px rgba(0,240,255,1),0 0 70px rgba(0,240,255,0.35);}}
+.sl{font-size:10px;letter-spacing:3px;color:var(--mt);text-transform:uppercase;}
 .sec{padding:64px 20px;text-align:center;max-width:1060px;margin:0 auto;}
 .stag{font-family:'Orbitron',sans-serif;font-size:9px;letter-spacing:5px;color:var(--red);text-transform:uppercase;display:block;margin-bottom:10px;}
 .sec h2{font-family:'Orbitron',sans-serif;font-size:clamp(18px,4vw,32px);font-weight:700;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px;position:relative;display:inline-block;}
+.sec h2::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:linear-gradient(90deg,var(--red),var(--cyan));transition:width 1.2s ease 0.3s;}
+.sec.rv.on h2::after{width:100%;}
 .sln{width:52px;height:2px;background:linear-gradient(90deg,var(--red),var(--cyan));margin:0 auto 34px;}
-.cg{display:grid;grid-template-columns:repeat(auto-fit,minmax(195px,1fr));gap:15px;margin-top:14px;}
-.cd{background:var(--cb);border:1px solid rgba(0,240,255,0.13);border-radius:8px;padding:24px 16px;position:relative;overflow:hidden;transition:transform 0.4s,border-color 0.4s,box-shadow 0.4s;transform-style:preserve-3d;}
+.cg{display:grid;grid-template-columns:repeat(auto-fit,minmax(185px,1fr));gap:15px;margin-top:14px;}
+.cd{background:var(--cb);border:1px solid rgba(0,240,255,0.13);border-radius:8px;padding:24px 16px;position:relative;overflow:hidden;transition:transform 0.4s,border-color 0.4s,box-shadow 0.4s;cursor:pointer;}
 .cd::before{content:'';position:absolute;top:0;left:-100%;width:60%;height:100%;background:linear-gradient(90deg,transparent,rgba(0,240,255,0.06),transparent);transition:left 0.6s;}
 .cd:hover::before{left:150%;}
-.cd:hover{transform:translateY(-5px) rotateX(3deg);border-color:rgba(0,240,255,0.5);box-shadow:0 16px 36px rgba(0,0,0,0.5),0 0 16px var(--cg);}
+.cd:hover{transform:translateY(-5px);border-color:rgba(0,240,255,0.5);box-shadow:0 16px 36px rgba(0,0,0,0.5),0 0 16px var(--cg);}
 .ci{width:40px;height:40px;border-radius:50%;border:1px solid var(--red);display:flex;align-items:center;justify-content:center;margin:0 auto 13px;font-size:18px;box-shadow:0 0 12px var(--rg);background:rgba(225,48,108,0.08);}
 .cd h3{font-family:'Orbitron',sans-serif;font-size:9px;letter-spacing:3px;color:var(--cyan);text-transform:uppercase;margin-bottom:8px;}
 .cd p{font-size:15px;font-weight:600;line-height:1.6;}
 .rt{font-size:10px!important;color:var(--mt)!important;letter-spacing:2px;}
+.vph{font-family:'Orbitron',sans-serif;font-size:8px;letter-spacing:2px;color:var(--cyan);text-transform:uppercase;margin-top:10px;opacity:0.5;transition:opacity 0.3s;}
+.cd:hover .vph{opacity:1;}
 .dc{position:absolute;width:28px;height:28px;}
 .dc.tl{top:8px;left:8px;border-top:1.5px solid var(--cyan);border-left:1.5px solid var(--cyan);}
 .dc.br{bottom:8px;right:8px;border-bottom:1.5px solid var(--cyan);border-right:1.5px solid var(--cyan);}
@@ -94,7 +91,7 @@ nav a.active-nav{color:var(--cyan);}nav a.active-nav::after{left:8%;right:8%;}
 .jb::before{content:'';position:absolute;top:-50px;right:-50px;width:150px;height:150px;border-radius:50%;background:radial-gradient(circle,rgba(225,48,108,0.12),transparent 70%);}
 .ji{display:flex;gap:15px;align-items:flex-start;padding:15px 0;border-bottom:1px solid rgba(0,240,255,0.07);}
 .ji:last-child{border-bottom:none;}
-.jn{font-family:'Orbitron',sans-serif;font-size:22px;font-weight:900;color:var(--red);text-shadow:0 0 12px var(--rg);line-height:1;min-width:36px;}
+.jn{font-family:'Orbitron',sans-serif;font-size:22px;font-weight:900;color:var(--red);line-height:1;min-width:36px;}
 .ji h4{font-family:'Orbitron',sans-serif;font-size:10px;letter-spacing:2px;color:var(--cyan);margin-bottom:5px;text-transform:uppercase;}
 .ji p{font-size:14px;color:var(--mt);}
 .ctg{display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:11px;margin-bottom:24px;}
@@ -106,7 +103,6 @@ nav a.active-nav{color:var(--cyan);}nav a.active-nav::after{left:8%;right:8%;}
 .btn::before{content:'';position:absolute;inset:0;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform 0.35s ease;z-index:-1;}
 .btn:hover{color:#fff;box-shadow:0 0 18px var(--rg);}
 .btn:hover::before{transform:scaleX(1);}
-/* PORTAL */
 .portal-pg{max-width:480px;margin:0 auto;padding:36px 20px;}
 .p-title{font-family:'Orbitron',sans-serif;font-size:19px;font-weight:900;letter-spacing:2px;text-align:center;margin-bottom:5px;background:linear-gradient(135deg,#fff 40%,var(--cyan) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
 .p-sub{text-align:center;font-size:11px;letter-spacing:4px;color:var(--mt);text-transform:uppercase;margin-bottom:26px;}
@@ -118,26 +114,25 @@ nav a.active-nav{color:var(--cyan);}nav a.active-nav::after{left:8%;right:8%;}
 .perr{background:rgba(225,48,108,0.1);border:1px solid rgba(225,48,108,0.3);border-radius:6px;padding:9px 13px;font-size:13px;color:#ff6b9d;margin-bottom:13px;display:none;}
 .pbtn{width:100%;padding:13px;background:transparent;border:1px solid var(--red);color:var(--red);font-family:'Orbitron',sans-serif;font-size:9px;letter-spacing:3px;font-weight:700;text-transform:uppercase;border-radius:4px;cursor:pointer;position:relative;overflow:hidden;transition:color 0.3s;margin-top:4px;}
 .pbtn::before{content:'';position:absolute;inset:0;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform 0.35s;z-index:-1;}
-.pbtn:hover{color:#fff;box-shadow:0 0 16px var(--rg);}
+.pbtn:hover{color:#fff;}
 .pbtn:hover::before{transform:scaleX(1);}
 .pbtn2{width:100%;padding:11px;background:rgba(0,240,255,0.05);border:1px solid rgba(0,240,255,0.18);color:var(--cyan);font-family:'Orbitron',sans-serif;font-size:9px;letter-spacing:3px;text-transform:uppercase;border-radius:4px;cursor:pointer;transition:all 0.3s;margin-top:9px;}
 .pbtn2:hover{background:rgba(0,240,255,0.1);border-color:var(--cyan);}
 .pdiv{text-align:center;margin:13px 0;color:var(--mt);font-size:11px;letter-spacing:3px;}
 .rg2{display:grid;grid-template-columns:1fr 1fr;gap:0 13px;}
-/* ID CARD */
 .id-wrap{max-width:440px;margin:0 auto;padding:28px 20px;}
 .id-card{background:linear-gradient(135deg,#0a0f1e,#050810,#0d1020);border:1px solid rgba(0,240,255,0.22);border-radius:13px;overflow:hidden;position:relative;margin-bottom:18px;}
 .id-card::before{content:'';position:absolute;top:-35px;right:-35px;width:130px;height:130px;border-radius:50%;background:radial-gradient(circle,rgba(0,240,255,0.07),transparent 70%);}
 .id-card::after{content:'';position:absolute;bottom:-25px;left:-25px;width:100px;height:100px;border-radius:50%;background:radial-gradient(circle,rgba(225,48,108,0.07),transparent 70%);}
 .id-hdr{background:rgba(0,240,255,0.05);border-bottom:1px solid rgba(0,240,255,0.1);padding:13px 18px;display:flex;align-items:center;justify-content:space-between;}
-.id-org{font-family:'Orbitron',sans-serif;font-size:14px;font-weight:900;color:var(--cyan);text-shadow:0 0 10px var(--cg);letter-spacing:2px;}
+.id-org{font-family:'Orbitron',sans-serif;font-size:14px;font-weight:900;color:var(--cyan);letter-spacing:2px;}
 .id-org-s{font-family:'Orbitron',sans-serif;font-size:7px;letter-spacing:3px;color:var(--mt);text-transform:uppercase;margin-top:2px;}
 .id-bdg{background:rgba(225,48,108,0.14);border:1px solid rgba(225,48,108,0.32);border-radius:3px;padding:3px 8px;font-family:'Orbitron',sans-serif;font-size:7px;letter-spacing:2px;color:#ff6b9d;text-transform:uppercase;}
 .id-body{padding:16px 18px;}
 .id-avr{display:flex;align-items:center;gap:14px;margin-bottom:14px;}
 .id-av{width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,rgba(0,240,255,0.12),rgba(225,48,108,0.12));border:2px solid var(--cyan);box-shadow:0 0 12px var(--cg);display:flex;align-items:center;justify-content:center;font-family:'Orbitron',sans-serif;font-size:20px;font-weight:900;color:var(--cyan);flex-shrink:0;}
 .id-fn{font-family:'Orbitron',sans-serif;font-size:15px;font-weight:900;color:var(--tx);letter-spacing:1px;}
-.id-rl{font-family:'Orbitron',sans-serif;font-size:8px;letter-spacing:3px;color:var(--red);text-transform:uppercase;margin-top:4px;text-shadow:0 0 8px var(--rg);}
+.id-rl{font-family:'Orbitron',sans-serif;font-size:8px;letter-spacing:3px;color:var(--red);text-transform:uppercase;margin-top:4px;}
 .id-uid{font-family:'Orbitron',sans-serif;font-size:9px;letter-spacing:2px;color:var(--mt);margin-top:4px;}
 .id-flds{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-bottom:13px;}
 .idf{background:rgba(0,240,255,0.04);border:1px solid rgba(0,240,255,0.09);border-radius:5px;padding:8px 10px;}
@@ -154,13 +149,12 @@ nav a.active-nav{color:var(--cyan);}nav a.active-nav::after{left:8%;right:8%;}
 .cdx.tl{top:7px;left:7px;border-top:1.5px solid rgba(0,240,255,0.38);border-left:1.5px solid rgba(0,240,255,0.38);}
 .cdx.tr{top:7px;right:7px;border-top:1.5px solid rgba(0,240,255,0.38);border-right:1.5px solid rgba(0,240,255,0.38);}
 .cdx.bl{bottom:7px;left:7px;border-bottom:1.5px solid rgba(0,240,255,0.38);border-left:1.5px solid rgba(0,240,255,0.38);}
-.cdx.br{bottom:7px;right:7px;border-bottom:1.5px solid rgba(0,240,255,0.38);border-right:1.5px solid rgba(0,240,255,0.38);}
+.cdx.br2{bottom:7px;right:7px;border-bottom:1.5px solid rgba(0,240,255,0.38);border-right:1.5px solid rgba(0,240,255,0.38);}
 .act-row{display:flex;gap:9px;}
 .abtn{flex:1;padding:10px;background:transparent;border:1px solid rgba(0,240,255,0.18);color:var(--cyan);font-family:'Orbitron',sans-serif;font-size:7px;letter-spacing:2px;text-transform:uppercase;border-radius:4px;cursor:pointer;transition:all 0.3s;}
 .abtn:hover{background:rgba(0,240,255,0.07);border-color:var(--cyan);}
 .abtn.red{border-color:rgba(225,48,108,0.28);color:var(--red);}
 .abtn.red:hover{background:rgba(225,48,108,0.07);border-color:var(--red);}
-/* MEMBERS */
 .mem-wrap{max-width:900px;margin:0 auto;padding:28px 20px;}
 .sec-bar{font-family:'Orbitron',sans-serif;font-size:9px;letter-spacing:4px;color:var(--mt);text-transform:uppercase;padding-bottom:9px;border-bottom:1px solid rgba(0,240,255,0.07);margin-bottom:15px;display:flex;justify-content:space-between;align-items:center;}
 .mg{display:grid;grid-template-columns:repeat(auto-fill,minmax(175px,1fr));gap:11px;}
@@ -170,12 +164,11 @@ nav a.active-nav{color:var(--cyan);}nav a.active-nav::after{left:8%;right:8%;}
 .mc-name{font-size:14px;font-weight:700;color:var(--tx);}
 .mc-role{font-family:'Orbitron',sans-serif;font-size:7px;letter-spacing:2px;color:var(--red);text-transform:uppercase;margin-top:3px;}
 .mc-id{font-family:'Orbitron',sans-serif;font-size:8px;letter-spacing:1px;color:var(--mt);margin-top:3px;}
-/* STUDY */
 .study-wrap{max-width:920px;margin:0 auto;padding:36px 20px;}
 .study-top{display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:20px;}
 .stats-band{display:flex;gap:11px;flex-wrap:wrap;margin-bottom:20px;}
 .sb{background:rgba(0,240,255,0.04);border:1px solid rgba(0,240,255,0.1);border-radius:8px;padding:10px 15px;flex:1;min-width:70px;}
-.sb-n{font-family:'Orbitron',sans-serif;font-size:22px;font-weight:900;color:var(--cyan);text-shadow:0 0 12px var(--cg);}
+.sb-n{font-family:'Orbitron',sans-serif;font-size:22px;font-weight:900;color:var(--cyan);}
 .sb-l{font-size:9px;letter-spacing:2px;color:var(--mt);text-transform:uppercase;}
 .knote{background:rgba(255,200,0,0.05);border:1px solid rgba(255,200,0,0.2);border-radius:9px;padding:14px 16px;margin-bottom:16px;display:flex;gap:10px;align-items:flex-start;}
 .knote-icon{font-size:16px;flex-shrink:0;margin-top:2px;}
@@ -190,7 +183,7 @@ nav a.active-nav{color:var(--cyan);}nav a.active-nav::after{left:8%;right:8%;}
 .add-panel.open{display:block;}
 .panel-t{font-family:'Orbitron',sans-serif;font-size:9px;letter-spacing:3px;color:var(--cyan);text-transform:uppercase;margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid rgba(0,240,255,0.07);}
 .add-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 13px;}
-.link-hint{font-size:12px;color:var(--mt);margin-top:5px;line-height:1.6;}
+.link-hint{font-size:12px;color:var(--mt);margin-top:5px;}
 .link-hint span{color:var(--cyan);}
 .sbar{width:100%;background:rgba(0,240,255,0.04);border:1px solid rgba(0,240,255,0.18);border-radius:6px;padding:10px 13px;color:var(--tx);font-family:'Rajdhani',sans-serif;font-size:15px;outline:none;margin-bottom:14px;}
 .sbar:focus{border-color:var(--cyan);}
@@ -201,8 +194,6 @@ nav a.active-nav{color:var(--cyan);}nav a.active-nav::after{left:8%;right:8%;}
 .mat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px;}
 .mat-card{background:var(--cb);border:1px solid rgba(0,240,255,0.11);border-radius:10px;padding:16px;position:relative;overflow:hidden;transition:all 0.3s;}
 .mat-card:hover{border-color:rgba(0,240,255,0.38);box-shadow:0 8px 22px rgba(0,0,0,0.4);}
-.mat-card::before{content:'';position:absolute;top:0;left:-100%;width:60%;height:100%;background:linear-gradient(90deg,transparent,rgba(0,240,255,0.05),transparent);transition:left 0.5s;}
-.mat-card:hover::before{left:150%;}
 .mat-badge{display:inline-block;padding:3px 9px;border-radius:3px;font-family:'Orbitron',sans-serif;font-size:7px;letter-spacing:2px;text-transform:uppercase;margin-bottom:9px;}
 .mat-badge.pdf{background:rgba(225,48,108,0.14);color:#ff6b9d;border:1px solid rgba(225,48,108,0.28);}
 .mat-badge.notes{background:rgba(0,240,255,0.09);color:var(--cyan);border:1px solid rgba(0,240,255,0.22);}
@@ -214,119 +205,133 @@ nav a.active-nav{color:var(--cyan);}nav a.active-nav::after{left:8%;right:8%;}
 .mat-btns{display:flex;gap:7px;}
 .mbtn{flex:1;padding:8px;background:transparent;border:1px solid rgba(0,240,255,0.18);color:var(--cyan);font-family:'Orbitron',sans-serif;font-size:7px;letter-spacing:2px;text-transform:uppercase;border-radius:4px;cursor:pointer;transition:all 0.3s;text-decoration:none;text-align:center;display:inline-block;}
 .mbtn:hover{background:rgba(0,240,255,0.07);border-color:var(--cyan);}
-.mbtn.del{border-color:rgba(225,48,108,0.28);color:var(--red);flex:0;padding:8px 10px;background:transparent;font-family:'Orbitron',sans-serif;font-size:7px;border-radius:4px;cursor:pointer;transition:all 0.3s;}
-.mbtn.del:hover{background:rgba(225,48,108,0.07);border-color:var(--red);}
 .empty-state{grid-column:1/-1;text-align:center;padding:50px 20px;color:var(--mt);}
 .empty-icon{font-size:34px;margin-bottom:11px;}
 .empty-txt{font-family:'Orbitron',sans-serif;font-size:9px;letter-spacing:3px;text-transform:uppercase;}
-/* NEWS */
 .news-wrap{max-width:920px;margin:0 auto;padding:36px 20px;}
-.news-top{display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:24px;}
-.news-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;}
-.news-card{background:var(--cb);border:1px solid rgba(0,240,255,0.12);border-radius:10px;overflow:hidden;position:relative;transition:all 0.3s;cursor:pointer;}
-.news-card:hover{border-color:rgba(0,240,255,0.4);box-shadow:0 8px 24px rgba(0,0,0,0.4),0 0 12px var(--cg);transform:translateY(-3px);}
-.news-card::before{content:'';position:absolute;top:0;left:-100%;width:60%;height:100%;background:linear-gradient(90deg,transparent,rgba(0,240,255,0.05),transparent);transition:left 0.5s;}
-.news-card:hover::before{left:150%;}
-.news-img{width:100%;height:150px;background:linear-gradient(135deg,rgba(0,240,255,0.08),rgba(225,48,108,0.08));display:flex;align-items:center;justify-content:center;font-size:44px;border-bottom:1px solid rgba(0,240,255,0.1);}
-.news-body{padding:15px;}
-.news-cat{display:inline-block;padding:3px 9px;border-radius:3px;font-family:'Orbitron',sans-serif;font-size:7px;letter-spacing:2px;text-transform:uppercase;margin-bottom:9px;}
-.news-cat.event{background:rgba(0,240,255,0.1);color:var(--cyan);border:1px solid rgba(0,240,255,0.25);}
-.news-cat.announcement{background:rgba(186,117,23,0.14);color:#ffc800;border:1px solid rgba(186,117,23,0.3);}
-.news-cat.update{background:rgba(99,153,34,0.14);color:#a0d44e;border:1px solid rgba(99,153,34,0.28);}
-.news-cat.news{background:rgba(225,48,108,0.14);color:#ff6b9d;border:1px solid rgba(225,48,108,0.28);}
-.news-title{font-family:'Orbitron',sans-serif;font-size:11px;font-weight:700;color:var(--tx);letter-spacing:1px;margin-bottom:7px;line-height:1.5;}
-.news-desc{font-size:13px;color:var(--mt);line-height:1.7;margin-bottom:11px;}
-.news-meta{font-family:'Orbitron',sans-serif;font-size:8px;letter-spacing:1px;color:var(--mt);}
-.news-read{font-family:'Orbitron',sans-serif;font-size:8px;letter-spacing:2px;color:var(--cyan);margin-top:10px;display:block;}
-/* FEATURED NEWS */
-.news-featured{background:var(--cb);border:1px solid rgba(225,48,108,0.25);border-radius:12px;padding:24px;margin-bottom:28px;position:relative;overflow:hidden;cursor:pointer;transition:all 0.3s;}
-.news-featured:hover{border-color:rgba(225,48,108,0.5);box-shadow:0 8px 28px rgba(0,0,0,0.4),0 0 16px var(--rg);}
+.news-featured{background:var(--cb);border:1px solid rgba(225,48,108,0.25);border-radius:12px;padding:24px;margin-bottom:24px;position:relative;overflow:hidden;cursor:pointer;transition:all 0.3s;}
+.news-featured:hover{border-color:var(--red);box-shadow:0 0 20px var(--rg);}
 .news-featured::before{content:'';position:absolute;top:-40px;right:-40px;width:150px;height:150px;border-radius:50%;background:radial-gradient(circle,rgba(225,48,108,0.12),transparent 70%);}
-.news-featured::after{content:'';position:absolute;bottom:-30px;left:-30px;width:100px;height:100px;border-radius:50%;background:radial-gradient(circle,rgba(0,240,255,0.08),transparent 70%);}
 .nf-inner{position:relative;z-index:1;}
 .nf-badge{display:inline-flex;align-items:center;gap:6px;font-family:'Orbitron',sans-serif;font-size:8px;letter-spacing:3px;color:var(--red);text-transform:uppercase;margin-bottom:12px;}
 .nf-dot{width:6px;height:6px;border-radius:50%;background:var(--red);box-shadow:0 0 8px var(--rg);animation:blk 1.5s ease infinite;}
 .nf-title{font-family:'Orbitron',sans-serif;font-size:clamp(14px,3vw,20px);font-weight:900;color:var(--tx);letter-spacing:1px;margin-bottom:10px;line-height:1.4;}
 .nf-desc{font-size:14px;color:var(--mt);line-height:1.8;margin-bottom:14px;}
-.nf-meta{display:flex;align-items:center;gap:16px;flex-wrap:wrap;font-family:'Orbitron',sans-serif;font-size:8px;letter-spacing:2px;color:var(--cyan);}
-/* NEWS MODAL */
-.news-modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.88);z-index:9999;display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;pointer-events:none;transition:opacity 0.3s;}
-.news-modal-overlay.open{opacity:1;pointer-events:all;}
-.news-modal{background:#0a0f1e;border:1px solid rgba(0,240,255,0.25);border-radius:14px;max-width:600px;width:100%;max-height:88vh;overflow-y:auto;position:relative;transform:scale(0.9) translateY(24px);transition:transform 0.35s;}
-.news-modal-overlay.open .news-modal{transform:scale(1) translateY(0);}
-.nm-header{background:rgba(0,240,255,0.05);border-bottom:1px solid rgba(0,240,255,0.1);padding:16px 20px;display:flex;align-items:flex-start;justify-content:space-between;gap:12px;position:sticky;top:0;z-index:2;background:#0d1428;}
-.nm-close{background:rgba(225,48,108,0.15);border:1px solid rgba(225,48,108,0.3);color:#ff6b9d;font-family:'Orbitron',sans-serif;font-size:10px;letter-spacing:2px;padding:8px 14px;border-radius:4px;cursor:pointer;flex-shrink:0;transition:all 0.3s;}
-.nm-close:hover{background:rgba(225,48,108,0.3);}
-.nm-cat-badge{display:inline-block;padding:3px 10px;border-radius:3px;font-family:'Orbitron',sans-serif;font-size:7px;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;}
-.nm-cat-badge.event{background:rgba(0,240,255,0.1);color:var(--cyan);border:1px solid rgba(0,240,255,0.25);}
-.nm-cat-badge.announcement{background:rgba(186,117,23,0.14);color:#ffc800;border:1px solid rgba(186,117,23,0.3);}
-.nm-cat-badge.update{background:rgba(99,153,34,0.14);color:#a0d44e;border:1px solid rgba(99,153,34,0.28);}
-.nm-cat-badge.news{background:rgba(225,48,108,0.14);color:#ff6b9d;border:1px solid rgba(225,48,108,0.28);}
-.nm-title{font-family:'Orbitron',sans-serif;font-size:clamp(13px,3vw,17px);font-weight:900;color:var(--tx);letter-spacing:1px;line-height:1.4;}
-.nm-body{padding:22px 20px;}
-.nm-icon{font-size:50px;text-align:center;display:block;margin-bottom:18px;}
-.nm-desc{font-size:15px;color:var(--mt);line-height:1.9;margin-bottom:22px;}
-.nm-info-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
-.nm-info-item{background:rgba(0,240,255,0.04);border:1px solid rgba(0,240,255,0.09);border-radius:6px;padding:10px 14px;}
-.nm-info-lbl{font-family:'Orbitron',sans-serif;font-size:7px;letter-spacing:2px;color:var(--red);text-transform:uppercase;margin-bottom:4px;}
-.nm-info-val{font-size:13px;font-weight:600;color:var(--tx);}
-.nm-footer{padding:14px 20px;border-top:1px solid rgba(0,240,255,0.08);text-align:center;}
-.nm-footer-txt{font-family:'Orbitron',sans-serif;font-size:8px;letter-spacing:3px;color:var(--mt);text-transform:uppercase;}
-.nm-footer-txt span{color:var(--red);}
+.nf-meta{display:flex;align-items:center;gap:18px;flex-wrap:wrap;font-family:'Orbitron',sans-serif;font-size:8px;letter-spacing:2px;color:var(--cyan);}
+.news-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:16px;}
+.news-card{background:var(--cb);border:1px solid rgba(0,240,255,0.12);border-radius:10px;overflow:hidden;cursor:pointer;transition:all 0.3s;position:relative;}
+.news-card:hover{border-color:rgba(0,240,255,0.4);transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,0.4);}
+.news-img{height:110px;background:linear-gradient(135deg,rgba(0,240,255,0.07),rgba(225,48,108,0.07));display:flex;align-items:center;justify-content:center;font-size:40px;border-bottom:1px solid rgba(0,240,255,0.1);}
+.news-body{padding:15px;}
+.news-cat{display:inline-block;padding:3px 9px;border-radius:3px;font-family:'Orbitron',sans-serif;font-size:7px;letter-spacing:2px;text-transform:uppercase;margin-bottom:9px;}
+.news-cat.event{background:rgba(0,240,255,0.1);color:var(--cyan);border:1px solid rgba(0,240,255,0.25);}
+.news-cat.announcement{background:rgba(186,117,23,0.14);color:#ffc800;border:1px solid rgba(186,117,23,0.3);}
+.news-title{font-family:'Orbitron',sans-serif;font-size:11px;font-weight:700;color:var(--tx);margin-bottom:7px;line-height:1.4;}
+.news-desc{font-size:12px;color:var(--mt);line-height:1.6;margin-bottom:10px;}
+.news-foot{display:flex;align-items:center;justify-content:space-between;}
+.news-by{font-size:11px;color:var(--mt);}
+.news-read{font-family:'Orbitron',sans-serif;font-size:8px;letter-spacing:2px;color:var(--cyan);}
+.mp-overlay,.nm-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.9);z-index:9999;display:flex;align-items:center;justify-content:center;padding:16px;opacity:0;pointer-events:none;transition:opacity 0.3s;}
+.mp-overlay.open,.nm-overlay.open{opacity:1;pointer-events:all;}
+.mp-box,.nm-box{background:linear-gradient(135deg,#0a0f1e,#050810);border:1px solid rgba(0,240,255,0.25);border-radius:14px;max-width:520px;width:100%;max-height:90vh;overflow-y:auto;transform:scale(0.9) translateY(20px);transition:transform 0.3s;}
+.mp-overlay.open .mp-box,.nm-overlay.open .nm-box{transform:scale(1) translateY(0);}
+.mp-close-row,.nm-hdr{padding:14px 18px;display:flex;justify-content:flex-end;border-bottom:1px solid rgba(0,240,255,0.1);}
+.nm-hdr{justify-content:space-between;align-items:flex-start;}
+.mp-close,.nm-close{background:rgba(225,48,108,0.15);border:1px solid rgba(225,48,108,0.3);color:#ff6b9d;font-family:'Orbitron',sans-serif;font-size:9px;letter-spacing:2px;padding:7px 14px;border-radius:4px;cursor:pointer;transition:all 0.3s;}
+.mp-close:hover,.nm-close:hover{background:rgba(225,48,108,0.35);}
+.mp-body,.nm-body{padding:18px 22px 26px;text-align:center;}
+.nm-body{text-align:left;}
+.mp-avatar{width:76px;height:76px;border-radius:50%;background:linear-gradient(135deg,rgba(0,240,255,0.15),rgba(225,48,108,0.1));border:2px solid var(--cyan);box-shadow:0 0 20px var(--cg);display:flex;align-items:center;justify-content:center;font-family:'Orbitron',sans-serif;font-size:24px;font-weight:900;color:var(--cyan);margin:0 auto 14px;}
+.mp-role-tag{display:inline-block;padding:4px 12px;border-radius:3px;font-family:'Orbitron',sans-serif;font-size:8px;letter-spacing:3px;text-transform:uppercase;margin-bottom:8px;background:rgba(225,48,108,0.14);color:#ff6b9d;border:1px solid rgba(225,48,108,0.3);}
+.mp-name{font-family:'Orbitron',sans-serif;font-size:clamp(15px,4vw,21px);font-weight:900;color:var(--tx);margin-bottom:4px;}
+.mp-badge{font-family:'Orbitron',sans-serif;font-size:9px;letter-spacing:2px;color:var(--cyan);margin-bottom:16px;display:block;}
+.mp-divider{width:60px;height:2px;background:linear-gradient(90deg,var(--red),var(--cyan));margin:0 auto 16px;}
+.mp-bio{font-size:15px;color:var(--mt);line-height:1.9;margin-bottom:16px;}
+.mp-ach{background:rgba(0,240,255,0.05);border:1px solid rgba(0,240,255,0.15);border-radius:8px;padding:12px 14px;display:flex;align-items:center;gap:10px;text-align:left;}
+.mp-ach-icon{font-size:20px;}
+.mp-ach-text{font-family:'Orbitron',sans-serif;font-size:9px;letter-spacing:1px;color:var(--cyan);line-height:1.6;}
+.mp-ft,.nm-ft{text-align:center;margin-top:16px;font-family:'Orbitron',sans-serif;font-size:7px;letter-spacing:3px;color:var(--mt);text-transform:uppercase;padding:12px 0 4px;}
+.mp-ft span,.nm-ft span{color:var(--red);}
+.nm-cat-tag{display:inline-block;padding:3px 10px;border-radius:3px;font-family:'Orbitron',sans-serif;font-size:7px;letter-spacing:2px;text-transform:uppercase;margin-bottom:7px;}
+.nm-cat-tag.event{background:rgba(0,240,255,0.1);color:var(--cyan);border:1px solid rgba(0,240,255,0.25);}
+.nm-cat-tag.announcement{background:rgba(186,117,23,0.14);color:#ffc800;border:1px solid rgba(186,117,23,0.3);}
+.nm-t{font-family:'Orbitron',sans-serif;font-size:clamp(13px,3vw,17px);font-weight:900;color:var(--tx);line-height:1.4;}
+.nm-ico{font-size:44px;text-align:center;display:block;margin-bottom:14px;}
+.nm-full-desc{font-size:15px;color:var(--mt);line-height:1.9;margin-bottom:18px;white-space:pre-line;}
+.nm-info-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;}
+.nm-item{background:rgba(0,240,255,0.04);border:1px solid rgba(0,240,255,0.09);border-radius:6px;padding:10px 13px;}
+.nm-lbl{font-family:'Orbitron',sans-serif;font-size:7px;letter-spacing:2px;color:var(--red);text-transform:uppercase;margin-bottom:3px;}
+.nm-val{font-size:13px;font-weight:600;color:var(--tx);}
+/* KALA AI */
+.kala-btn{position:fixed;bottom:24px;right:24px;width:58px;height:58px;border-radius:50%;background:linear-gradient(135deg,#0d1530,#050810);border:2px solid var(--cyan);box-shadow:0 0 20px var(--cg);cursor:pointer;z-index:5000;display:flex;align-items:center;justify-content:center;transition:all 0.3s;animation:kG 3s ease-in-out infinite;}
+@keyframes kG{0%,100%{box-shadow:0 0 20px var(--cg);}50%{box-shadow:0 0 35px rgba(0,240,255,0.8),0 0 60px rgba(0,240,255,0.3);}}
+.kala-btn:hover{transform:scale(1.1);}
+.kala-btn-lbl{font-family:'Orbitron',sans-serif;font-size:10px;font-weight:900;color:var(--cyan);letter-spacing:1px;}
+.kala-notif{position:absolute;top:-3px;right:-3px;width:16px;height:16px;border-radius:50%;background:var(--red);border:2px solid var(--dark);display:flex;align-items:center;justify-content:center;font-size:7px;color:#fff;font-weight:900;animation:blk 2s ease infinite;}
+.kala-win{position:fixed;bottom:94px;right:24px;width:330px;max-height:500px;background:#080d1a;border:1px solid rgba(0,240,255,0.22);border-radius:16px;display:flex;flex-direction:column;z-index:5001;box-shadow:0 20px 60px rgba(0,0,0,0.7),0 0 30px rgba(0,240,255,0.08);transform:scale(0.85) translateY(20px);opacity:0;pointer-events:none;transition:all 0.3s;}
+.kala-win.open{transform:scale(1) translateY(0);opacity:1;pointer-events:all;}
+.kala-hdr{background:rgba(0,240,255,0.06);border-bottom:1px solid rgba(0,240,255,0.1);padding:12px 15px;border-radius:16px 16px 0 0;display:flex;align-items:center;justify-content:space-between;}
+.kala-hdr-l{display:flex;align-items:center;gap:9px;}
+.kala-av{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,rgba(0,240,255,0.2),rgba(225,48,108,0.1));border:1.5px solid var(--cyan);display:flex;align-items:center;justify-content:center;font-family:'Orbitron',sans-serif;font-size:8px;font-weight:900;color:var(--cyan);}
+.kala-nm{font-family:'Orbitron',sans-serif;font-size:11px;font-weight:900;color:var(--cyan);letter-spacing:2px;}
+.kala-st{display:flex;align-items:center;gap:4px;margin-top:2px;}
+.kala-dot{width:5px;height:5px;border-radius:50%;background:#00ff88;box-shadow:0 0 5px #00ff88;animation:blk 2s ease infinite;}
+.kala-st-t{font-size:10px;color:var(--mt);}
+.kala-x{background:none;border:none;color:var(--mt);cursor:pointer;font-size:16px;padding:2px 5px;border-radius:4px;transition:color 0.2s;line-height:1;}
+.kala-x:hover{color:var(--red);}
+.kala-msgs{flex:1;overflow-y:auto;padding:12px;display:flex;flex-direction:column;gap:9px;min-height:240px;max-height:300px;scrollbar-width:thin;scrollbar-color:rgba(0,240,255,0.15) transparent;}
+.kala-msgs::-webkit-scrollbar{width:3px;}
+.kala-msgs::-webkit-scrollbar-thumb{background:rgba(0,240,255,0.15);border-radius:2px;}
+.km{display:flex;gap:7px;align-items:flex-end;max-width:92%;}
+.km.user{align-self:flex-end;flex-direction:row-reverse;}
+.km-av{width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:9px;flex-shrink:0;}
+.km.bot .km-av{background:rgba(0,240,255,0.1);border:1px solid rgba(0,240,255,0.25);font-family:'Orbitron',sans-serif;font-size:6px;color:var(--cyan);}
+.km.user .km-av{background:rgba(225,48,108,0.12);border:1px solid rgba(225,48,108,0.25);font-size:12px;}
+.km-b{padding:8px 12px;border-radius:10px;font-size:13px;line-height:1.6;max-width:210px;white-space:pre-line;}
+.km.bot .km-b{background:rgba(0,240,255,0.06);border:1px solid rgba(0,240,255,0.1);color:var(--tx);border-radius:3px 10px 10px 10px;}
+.km.user .km-b{background:rgba(225,48,108,0.1);border:1px solid rgba(225,48,108,0.2);color:var(--tx);border-radius:10px 3px 10px 10px;}
+.kala-typing-wrap{display:flex;gap:7px;align-items:flex-end;}
+.kala-typing{padding:8px 12px;background:rgba(0,240,255,0.06);border:1px solid rgba(0,240,255,0.1);border-radius:3px 10px 10px 10px;display:flex;gap:4px;align-items:center;}
+.kala-typing span{width:5px;height:5px;border-radius:50%;background:var(--cyan);opacity:0.4;animation:td 1.2s ease-in-out infinite;}
+.kala-typing span:nth-child(2){animation-delay:0.2s;}
+.kala-typing span:nth-child(3){animation-delay:0.4s;}
+@keyframes td{0%,60%,100%{opacity:0.4;transform:translateY(0);}30%{opacity:1;transform:translateY(-3px);}}
+.kala-sugs{padding:0 12px 8px;display:flex;flex-wrap:wrap;gap:5px;}
+.ksug{padding:4px 9px;background:rgba(0,240,255,0.04);border:1px solid rgba(0,240,255,0.16);border-radius:20px;font-size:11px;color:var(--cyan);cursor:pointer;transition:all 0.2s;font-family:'Rajdhani',sans-serif;font-weight:600;}
+.ksug:hover{background:rgba(0,240,255,0.1);border-color:var(--cyan);}
+.kala-inp-row{padding:10px 12px;border-top:1px solid rgba(0,240,255,0.07);display:flex;gap:7px;align-items:center;}
+.kala-inp{flex:1;background:rgba(0,240,255,0.04);border:1px solid rgba(0,240,255,0.16);border-radius:7px;padding:8px 11px;color:var(--tx);font-family:'Rajdhani',sans-serif;font-size:13px;font-weight:600;outline:none;transition:border-color 0.3s;}
+.kala-inp:focus{border-color:var(--cyan);}
+.kala-inp::placeholder{color:rgba(136,146,176,0.35);font-weight:400;}
+.kala-send{width:34px;height:34px;border-radius:7px;background:rgba(0,240,255,0.08);border:1px solid rgba(0,240,255,0.25);color:var(--cyan);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.2s;font-size:13px;flex-shrink:0;}
+.kala-send:hover{background:rgba(0,240,255,0.18);}
+.kala-foot{text-align:center;padding:0 12px 9px;font-family:'Orbitron',sans-serif;font-size:7px;letter-spacing:2px;color:rgba(136,146,176,0.3);text-transform:uppercase;}
+@media(max-width:400px){.kala-win{width:calc(100vw - 16px);right:8px;}}
 .rv{opacity:0;transform:translateY(24px);transition:opacity 0.7s ease,transform 0.7s ease;}
 .rv.on{opacity:1;transform:none;}
 footer{background:rgba(5,8,16,0.97);border-top:1px solid rgba(0,240,255,0.1);text-align:center;padding:22px 20px;}
 footer p{font-family:'Orbitron',sans-serif;font-size:9px;letter-spacing:4px;color:var(--mt);text-transform:uppercase;}
 footer span{color:var(--red);}
-
-/* MEMBER PROFILE MODAL */
-.mem-clickable{cursor:pointer;}
-.mem-clickable:hover .view-profile-hint{opacity:1 !important;}
-.view-profile-hint{font-family:'Orbitron',sans-serif;font-size:8px;letter-spacing:2px;color:var(--cyan);text-transform:uppercase;margin-top:10px;opacity:0.5;transition:opacity 0.3s;}
-.mp-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.9);z-index:9999;display:flex;align-items:center;justify-content:center;padding:16px;opacity:0;pointer-events:none;transition:opacity 0.3s;}
-.mp-overlay.open{opacity:1;pointer-events:all;}
-.mp-box{background:linear-gradient(135deg,#0a0f1e,#050810,#0d1020);border:1px solid rgba(0,240,255,0.25);border-radius:16px;max-width:520px;width:100%;max-height:90vh;overflow-y:auto;transform:scale(0.9) translateY(24px);transition:transform 0.3s;position:relative;}
-.mp-overlay.open .mp-box{transform:scale(1) translateY(0);}
-.mp-box::before{content:'';position:absolute;top:-50px;right:-50px;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(0,240,255,0.07),transparent 70%);pointer-events:none;}
-.mp-box::after{content:'';position:absolute;bottom:-40px;left:-40px;width:140px;height:140px;border-radius:50%;background:radial-gradient(circle,rgba(225,48,108,0.07),transparent 70%);pointer-events:none;}
-.mp-hdr{padding:18px 22px 0;display:flex;justify-content:flex-end;}
-.mp-close{background:rgba(225,48,108,0.15);border:1px solid rgba(225,48,108,0.3);color:#ff6b9d;font-family:'Orbitron',sans-serif;font-size:9px;letter-spacing:2px;padding:7px 14px;border-radius:4px;cursor:pointer;transition:all 0.3s;}
-.mp-close:hover{background:rgba(225,48,108,0.35);}
-.mp-body{padding:20px 22px 28px;position:relative;z-index:1;}
-.mp-avatar{width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,rgba(0,240,255,0.15),rgba(225,48,108,0.15));border:2px solid var(--cyan);box-shadow:0 0 20px var(--cg);display:flex;align-items:center;justify-content:center;font-family:'Orbitron',sans-serif;font-size:26px;font-weight:900;color:var(--cyan);margin:0 auto 18px;}
-.mp-role-tag{display:inline-block;padding:4px 12px;border-radius:3px;font-family:'Orbitron',sans-serif;font-size:8px;letter-spacing:3px;text-transform:uppercase;margin-bottom:6px;background:rgba(225,48,108,0.14);color:#ff6b9d;border:1px solid rgba(225,48,108,0.3);}
-.mp-name{font-family:'Orbitron',sans-serif;font-size:clamp(16px,4vw,22px);font-weight:900;color:var(--tx);letter-spacing:1px;margin-bottom:4px;text-align:center;}
-.mp-badge{font-family:'Orbitron',sans-serif;font-size:9px;letter-spacing:2px;color:var(--cyan);text-align:center;margin-bottom:18px;display:block;}
-.mp-divider{width:60px;height:2px;background:linear-gradient(90deg,var(--red),var(--cyan));margin:0 auto 18px;}
-.mp-bio{font-size:15px;color:var(--mt);line-height:1.9;text-align:center;margin-bottom:20px;}
-.mp-achievement{background:rgba(0,240,255,0.05);border:1px solid rgba(0,240,255,0.15);border-radius:8px;padding:14px 16px;display:flex;align-items:center;gap:12px;}
-.mp-ach-icon{font-size:22px;flex-shrink:0;}
-.mp-ach-text{font-size:13px;color:var(--cyan);font-family:'Orbitron',sans-serif;font-size:10px;letter-spacing:2px;}
-.mp-ft{text-align:center;margin-top:18px;font-family:'Orbitron',sans-serif;font-size:8px;letter-spacing:3px;color:var(--mt);text-transform:uppercase;}
-.mp-ft span{color:var(--red);}
-
 </style>
 </head>
 <body>
 <div class="wrap">
 <canvas id="bgc"></canvas>
 <div class="cnt">
-
 <header>
   <div class="lw"><div class="r1"></div><div class="r2"></div><div class="lc">KFO</div></div>
   <h2>Kala Force Organization</h2>
 </header>
 <nav>
-  <a onclick="gotoPage('home')" id="n-home" class="active-nav">Home</a>
-  <a onclick="gotoPage('home','about')">About</a>
-  <a onclick="gotoPage('home','join')">Join</a>
-  <a onclick="gotoPage('home','contact')">Contact</a>
-  <a onclick="gotoPage('portal')" id="n-portal">Portal</a>
-  <a onclick="gotoPage('study')" id="n-study">Study</a>
-  <a onclick="gotoPage('news')" id="n-news">News</a>
+  <a onclick="gP('home')" id="n-home" class="active-nav">Home</a>
+  <a onclick="gP('home','about')">About</a>
+  <a onclick="gP('home','join')">Join</a>
+  <a onclick="gP('home','contact')">Contact</a>
+  <a onclick="gP('portal')" id="n-portal">Portal</a>
+  <a onclick="gP('study')" id="n-study">Study</a>
+  <a onclick="gP('news')" id="n-news">News</a>
   <a href="https://instagram.com/thekalaforceofficial__" target="_blank">Instagram</a>
 </nav>
-
 <!-- HOME -->
 <div class="pg active" id="pg-home">
   <div class="hero">
@@ -334,11 +339,7 @@ footer span{color:var(--red);}
     <h1 data-text="KALA FORCE">KALA FORCE</h1>
     <div class="hsub">Student <span>Power</span> | Unity | Legacy</div>
     <div class="hln"></div>
-    <div class="cs"><div class="cb">
-      <div class="fc fn">KFO</div><div class="fc bk">KFO</div>
-      <div class="fc lf"></div><div class="fc rt"></div>
-      <div class="fc tp"></div><div class="fc bt"></div>
-    </div></div>
+    <div class="cs"><div class="cb"><div class="fc fn">KFO</div><div class="fc bk">KFO</div><div class="fc lf"></div><div class="fc rt"></div><div class="fc tp"></div><div class="fc bt"></div></div></div>
   </div>
   <div class="sr">
     <div class="si rv"><span class="sn" data-t="20" data-s="+">0</span><span class="sl">Members</span></div>
@@ -350,17 +351,16 @@ footer span{color:var(--red);}
     <span class="stag">Who We Are</span><h2>About KFO</h2><div class="sln"></div>
     <p style="max-width:570px;margin:0 auto 34px;font-size:16px;color:var(--mt);line-height:1.8;">KFO is a student organization where students capture college memories, build unity, and grow together. We stand for discipline, brotherhood, and the spirit of student power.</p>
     <div class="cg">
-      <div class="cd rv mem-clickable" onclick="openMemberModal('pawan')"><div class="dc tl"></div><div class="dc br"></div><div class="ci">&#128081;</div><h3>Founder</h3><p>Pawan Choudhary</p><p class="rt">Founder &amp; Visionary</p><p class="view-profile-hint">View Profile &rarr;</p></div>
-      <div class="cd rv mem-clickable" onclick="openMemberModal('piyush')"><div class="dc tl"></div><div class="dc br"></div><div class="ci">&#11088;</div><h3>Co-Founder</h3><p>Piyush Yadav</p><p class="rt">Co-Founder</p><p class="view-profile-hint">View Profile &rarr;</p></div>
-      <div class="cd rv mem-clickable" onclick="openMemberModal('karan')"><div class="dc tl"></div><div class="dc br"></div><div class="ci">&#9889;</div><h3>Head</h3><p>Karan Choudhary</p><p class="rt">Organizational Head</p><p class="view-profile-hint">View Profile &rarr;</p></div>
-      <div class="cd rv mem-clickable" onclick="openMemberModal('ritesh')"><div class="dc tl"></div><div class="dc br"></div><div class="ci">&#128737;</div><h3>Secretary</h3><p>Ritesh Tolani</p><p class="rt">Secretary</p><p class="view-profile-hint">View Profile &rarr;</p></div>
-      <div class="cd rv mem-clickable" onclick="openMemberModal('naveen')"><div class="dc tl"></div><div class="dc br"></div><div class="ci">&#128100;</div><h3>Secretary</h3><p>Naveen Rao</p><p class="rt">Secretary</p><p class="view-profile-hint">View Profile &rarr;</p></div>
+      <div class="cd rv" onclick="oMP('pawan')"><div class="dc tl"></div><div class="dc br"></div><div class="ci">&#128081;</div><h3>Founder</h3><p>Pawan Choudhary</p><p class="rt">Founder &amp; Visionary</p><p class="vph">View Profile &rarr;</p></div>
+      <div class="cd rv" onclick="oMP('piyush')"><div class="dc tl"></div><div class="dc br"></div><div class="ci">&#11088;</div><h3>Co-Founder</h3><p>Piyush Yadav</p><p class="rt">Co-Founder</p><p class="vph">View Profile &rarr;</p></div>
+      <div class="cd rv" onclick="oMP('karan')"><div class="dc tl"></div><div class="dc br"></div><div class="ci">&#9889;</div><h3>Head</h3><p>Karan Choudhary</p><p class="rt">Organizational Head</p><p class="vph">View Profile &rarr;</p></div>
+      <div class="cd rv" onclick="oMP('ritesh')"><div class="dc tl"></div><div class="dc br"></div><div class="ci">&#128737;</div><h3>Secretary</h3><p>Ritesh Tolani</p><p class="rt">Secretary</p><p class="vph">View Profile &rarr;</p></div>
+      <div class="cd rv" onclick="oMP('naveen')"><div class="dc tl"></div><div class="dc br"></div><div class="ci">&#128100;</div><h3>Secretary</h3><p>Naveen Rao</p><p class="rt">Secretary</p><p class="vph">View Profile &rarr;</p></div>
     </div>
   </div>
   <div class="sec rv" id="join">
     <span class="stag">Become Part of Us</span><h2>How to Join</h2><div class="sln"></div>
-    <div class="jb">
-      <div class="dc tl"></div><div class="dc br"></div>
+    <div class="jb"><div class="dc tl"></div><div class="dc br"></div>
       <div class="ji"><div class="jn">01</div><div><h4>Apply</h4><p>Contact us via Instagram or Email and express your interest in joining KFO.</p></div></div>
       <div class="ji"><div class="jn">02</div><div><h4>Physical Examination</h4><p>Clear the physical examination to prove your commitment and fitness.</p></div></div>
       <div class="ji"><div class="jn">03</div><div><h4>Selection &amp; Reservation</h4><p>Reservation available for SC, ST, OBC categories as per norms.</p></div></div>
@@ -370,64 +370,49 @@ footer span{color:var(--red);}
   <div class="sec rv" id="contact">
     <span class="stag">Get in Touch</span><h2>Contact Us</h2><div class="sln"></div>
     <div class="ctg">
-      <div class="ct"><span class="ctl">Email</span><p><a id="kfo-email" style="color:var(--tx);text-decoration:none;font-weight:600;font-size:14px;">kala2006@gmail.com</a></p></div>
+      <div class="ct"><span class="ctl">Email</span><p><a id="kfo-email" style="color:var(--tx);text-decoration:none;font-weight:600;">kala2006@gmail.com</a></p></div>
       <div class="ct"><span class="ctl">Mobile</span><p>7877320103</p></div>
       <div class="ct"><span class="ctl">Location</span><p>Jodhpur, Rajasthan</p></div>
     </div>
     <a class="btn" href="https://instagram.com/thekalaforceofficial__" target="_blank">&#10230; &nbsp;Follow on Instagram</a>
   </div>
 </div>
-
 <!-- PORTAL -->
 <div class="pg" id="pg-portal">
   <div class="pg active" id="ps-signin">
     <div class="portal-pg">
       <div style="height:18px;"></div>
-      <div class="p-title">MEMBER LOGIN</div>
-      <div class="p-sub">KFO Identity Portal</div>
+      <div class="p-title">MEMBER LOGIN</div><div class="p-sub">KFO Identity Portal</div>
       <div class="perr" id="si-err"></div>
       <div class="pf"><label>Member ID or Name</label><input type="text" id="si-id" placeholder="e.g. KFO001 or your name"></div>
       <div class="pf"><label>Password</label><input type="password" id="si-pw" placeholder="Enter your password"></div>
-      <button class="pbtn" onclick="doSignIn()">&#10230; &nbsp;Sign In</button>
+      <button class="pbtn" onclick="doSI()">&#10230; &nbsp;Sign In</button>
       <div class="pdiv">&#8212; or &#8212;</div>
-      <button class="pbtn2" onclick="showPS('register')">Create New Member ID</button>
+      <button class="pbtn2" onclick="sPS('register')">Create New Member ID</button>
     </div>
   </div>
   <div class="pg" id="ps-register">
     <div class="portal-pg">
       <div style="height:16px;"></div>
-      <div class="p-title">CREATE ID</div>
-      <div class="p-sub">New KFO Member Registration</div>
+      <div class="p-title">CREATE ID</div><div class="p-sub">New KFO Member Registration</div>
       <div class="perr" id="reg-err"></div>
-      <div class="rg2">
-        <div class="pf"><label>Full Name</label><input type="text" id="r-name" placeholder="Your full name"></div>
-        <div class="pf"><label>Mobile</label><input type="text" id="r-mobile" placeholder="Mobile number"></div>
-      </div>
-      <div class="rg2">
-        <div class="pf"><label>College</label><input type="text" id="r-college" placeholder="College name"></div>
-        <div class="pf"><label>City</label><input type="text" id="r-city" placeholder="Your city"></div>
-      </div>
+      <div class="rg2"><div class="pf"><label>Full Name</label><input type="text" id="r-name" placeholder="Your full name"></div><div class="pf"><label>Mobile</label><input type="text" id="r-mobile" placeholder="Mobile number"></div></div>
+      <div class="rg2"><div class="pf"><label>College</label><input type="text" id="r-college" placeholder="College name"></div><div class="pf"><label>City</label><input type="text" id="r-city" placeholder="Your city"></div></div>
       <div class="pf"><label>Role</label><input type="text" id="r-role" placeholder="e.g. Member, Volunteer"></div>
-      <div class="rg2">
-        <div class="pf"><label>Password</label><input type="password" id="r-pw" placeholder="Set password"></div>
-        <div class="pf"><label>Confirm</label><input type="password" id="r-pw2" placeholder="Repeat password"></div>
-      </div>
-      <button class="pbtn" onclick="doRegister()">&#10230; &nbsp;Create Member ID</button>
+      <div class="rg2"><div class="pf"><label>Password</label><input type="password" id="r-pw" placeholder="Set password"></div><div class="pf"><label>Confirm</label><input type="password" id="r-pw2" placeholder="Repeat password"></div></div>
+      <button class="pbtn" onclick="doReg()">&#10230; &nbsp;Create Member ID</button>
       <div class="pdiv">&#8212; or &#8212;</div>
-      <button class="pbtn2" onclick="showPS('signin')">Back to Sign In</button>
+      <button class="pbtn2" onclick="sPS('signin')">Back to Sign In</button>
     </div>
   </div>
   <div class="pg" id="ps-idcard">
     <div class="id-wrap">
-      <div class="sec-bar"><span>Your KFO ID Card</span><button class="abtn" style="flex:0;padding:8px 12px;" onclick="loadMembers();showPS('members')">All Members</button></div>
+      <div class="sec-bar"><span>Your KFO ID Card</span><button class="abtn" style="flex:0;padding:8px 12px;" onclick="loadMems();sPS('members')">All Members</button></div>
       <div class="id-card">
-        <div class="cdx tl"></div><div class="cdx tr"></div><div class="cdx bl"></div><div class="cdx br"></div>
+        <div class="cdx tl"></div><div class="cdx tr"></div><div class="cdx bl"></div><div class="cdx br2"></div>
         <div class="id-hdr"><div><div class="id-org">KFO</div><div class="id-org-s">Kala Force Organization</div></div><div class="id-bdg">Official ID</div></div>
         <div class="id-body">
-          <div class="id-avr">
-            <div class="id-av" id="id-av">KF</div>
-            <div><div class="id-fn" id="id-fn">-</div><div class="id-rl" id="id-rl">-</div><div class="id-uid" id="id-uid">#KFO000</div></div>
-          </div>
+          <div class="id-avr"><div class="id-av" id="id-av">KF</div><div><div class="id-fn" id="id-fn">-</div><div class="id-rl" id="id-rl">-</div><div class="id-uid" id="id-uid">#KFO000</div></div></div>
           <div class="id-flds">
             <div class="idf"><div class="idf-l">College</div><div class="idf-v" id="id-cl">-</div></div>
             <div class="idf"><div class="idf-l">City</div><div class="idf-v" id="id-cy">-</div></div>
@@ -438,29 +423,22 @@ footer span{color:var(--red);}
         </div>
         <div class="id-ftr"><div class="id-ftr-t">Jodhpur, Rajasthan</div><div class="id-act"><div class="dot"></div>Active Member</div></div>
       </div>
-      <div class="act-row">
-        <button class="abtn" onclick="loadMembers();showPS('members')">All Members</button>
-        <button class="abtn red" onclick="signOut()">Sign Out</button>
-      </div>
+      <div class="act-row"><button class="abtn" onclick="loadMems();sPS('members')">All Members</button><button class="abtn red" onclick="signOut()">Sign Out</button></div>
     </div>
   </div>
   <div class="pg" id="ps-members">
     <div class="mem-wrap">
-      <div class="sec-bar"><span>KFO Member Directory</span><button class="abtn" style="flex:0;padding:8px 12px;" onclick="showPS('idcard')">My ID Card</button></div>
+      <div class="sec-bar"><span>KFO Member Directory</span><button class="abtn" style="flex:0;padding:8px 12px;" onclick="sPS('idcard')">My ID Card</button></div>
       <div class="mg" id="mem-grid"></div>
     </div>
   </div>
 </div>
-
 <!-- STUDY -->
 <div class="pg" id="pg-study">
   <div class="study-wrap">
     <div class="study-top">
-      <div>
-        <span class="stag" style="display:block;margin-bottom:8px;">KFO Knowledge Hub</span>
-        <h2 style="font-family:'Orbitron',sans-serif;font-size:clamp(16px,4vw,28px);font-weight:700;letter-spacing:3px;text-transform:uppercase;">Study Material</h2>
-      </div>
-      <button class="pbtn" style="width:auto;padding:11px 22px;" onclick="toggleAddPanel()">+ Add Material</button>
+      <div><span class="stag" style="display:block;margin-bottom:8px;">KFO Knowledge Hub</span><h2 style="font-family:'Orbitron',sans-serif;font-size:clamp(16px,4vw,28px);font-weight:700;letter-spacing:3px;text-transform:uppercase;">Study Material</h2></div>
+      <button class="pbtn" style="width:auto;padding:11px 22px;" onclick="togAP()">+ Add Material</button>
     </div>
     <div class="stats-band">
       <div class="sb"><div class="sb-n" id="st-total">0</div><div class="sb-l">Total</div></div>
@@ -468,373 +446,159 @@ footer span{color:var(--red);}
       <div class="sb"><div class="sb-n" id="st-notes">0</div><div class="sb-l">Notes</div></div>
       <div class="sb"><div class="sb-n" id="st-video">0</div><div class="sb-l">Videos</div></div>
     </div>
-    <div class="knote">
-      <div class="knote-icon">&#9432;</div>
-      <div>
-        <div class="knote-t">Note</div>
-        <div class="knote-p">This platform is currently developed as a <span>conceptual initiative</span> for KFO. Due to limited funding, a centralized data storage or server-based system is not available at this time.</div>
-      </div>
-    </div>
-    <div class="howto">
-      <div class="howto-t">How to add material</div>
-      <ol>
-        <li>Upload PDF to <span>Google Drive</span></li>
-        <li>Right-click &rarr; <span>Share</span> &rarr; set <span>"Anyone with link"</span> &rarr; Copy link</li>
-        <li>Click <span>+ Add Material</span> above and paste the link</li>
-      </ol>
-    </div>
+    <div class="knote"><div class="knote-icon">&#9432;</div><div><div class="knote-t">Note</div><div class="knote-p">This platform is a <span>conceptual initiative</span> for KFO. A centralized server is not available at this time.</div></div></div>
+    <div class="howto"><div class="howto-t">How to add material</div><ol><li>Upload PDF to <span>Google Drive</span></li><li>Share &rarr; <span>"Anyone with link"</span> &rarr; Copy link</li><li>Click <span>+ Add Material</span> and paste the link</li></ol></div>
     <div class="add-panel" id="add-panel">
       <div class="panel-t">Add New Study Material</div>
+      <div class="add-grid"><div class="pf"><label>Title</label><input type="text" id="ap-title" placeholder="e.g. Physics Chapter 5"></div><div class="pf"><label>Subject</label><input type="text" id="ap-subject" placeholder="e.g. Physics, Maths"></div></div>
       <div class="add-grid">
-        <div class="pf"><label>Title</label><input type="text" id="ap-title" placeholder="e.g. Physics Chapter 5"></div>
-        <div class="pf"><label>Subject</label><input type="text" id="ap-subject" placeholder="e.g. Physics, Maths"></div>
-      </div>
-      <div class="add-grid">
-        <div class="pf"><label>Category</label>
-          <select id="ap-cat" style="width:100%;background:rgba(0,240,255,0.04);border:1px solid rgba(0,240,255,0.2);border-radius:6px;padding:10px 13px;color:#e8eaf6;font-family:'Rajdhani',sans-serif;font-size:15px;font-weight:600;outline:none;">
-            <option value="pdf">PDF</option><option value="notes">Notes</option><option value="video">Video</option><option value="other">Other</option>
-          </select>
-        </div>
+        <div class="pf"><label>Category</label><select id="ap-cat" style="width:100%;background:rgba(0,240,255,0.04);border:1px solid rgba(0,240,255,0.2);border-radius:6px;padding:10px 13px;color:#e8eaf6;font-family:'Rajdhani',sans-serif;font-size:15px;font-weight:600;outline:none;"><option value="pdf">PDF</option><option value="notes">Notes</option><option value="video">Video</option><option value="other">Other</option></select></div>
         <div class="pf"><label>Added By</label><input type="text" id="ap-by" placeholder="Your name"></div>
       </div>
-      <div class="pf">
-        <label>Google Drive / Any Shareable Link</label>
-        <input type="url" id="ap-url" placeholder="https://drive.google.com/file/d/...">
-        <div class="link-hint">Google Drive: Share &rarr; <span>Anyone with link can view</span> &rarr; Copy link</div>
-      </div>
+      <div class="pf"><label>Google Drive / Shareable Link</label><input type="url" id="ap-url" placeholder="https://drive.google.com/..."><div class="link-hint">Share &rarr; <span>Anyone with link</span> &rarr; Copy link</div></div>
       <div class="perr" id="ap-err" style="display:none;"></div>
-      <div style="display:flex;gap:10px;margin-top:6px;">
-        <button class="pbtn" style="width:auto;flex:1;" onclick="doAddMaterial()">&#10230; &nbsp;Save Material</button>
-        <button class="pbtn2" style="margin:0;flex:0;padding:11px 18px;" onclick="toggleAddPanel()">Cancel</button>
-      </div>
+      <div style="display:flex;gap:10px;margin-top:6px;"><button class="pbtn" style="width:auto;flex:1;" onclick="doAddMat()">&#10230; &nbsp;Save</button><button class="pbtn2" style="margin:0;flex:0;padding:11px 18px;" onclick="togAP()">Cancel</button></div>
     </div>
-    <input class="sbar" type="text" id="mat-search" placeholder="Search title, subject or name..." oninput="renderMats()">
-    <div class="cat-filters">
-      <div class="cf on" onclick="setMatFilter('all',this)">All</div>
-      <div class="cf" onclick="setMatFilter('pdf',this)">PDF</div>
-      <div class="cf" onclick="setMatFilter('notes',this)">Notes</div>
-      <div class="cf" onclick="setMatFilter('video',this)">Video</div>
-      <div class="cf" onclick="setMatFilter('other',this)">Other</div>
-    </div>
+    <input class="sbar" type="text" id="mat-search" placeholder="Search title, subject or name..." oninput="rMats()">
+    <div class="cat-filters"><div class="cf on" onclick="sMF('all',this)">All</div><div class="cf" onclick="sMF('pdf',this)">PDF</div><div class="cf" onclick="sMF('notes',this)">Notes</div><div class="cf" onclick="sMF('video',this)">Video</div><div class="cf" onclick="sMF('other',this)">Other</div></div>
     <div class="mat-grid" id="mat-grid"></div>
   </div>
 </div>
-
 <!-- NEWS -->
 <div class="pg" id="pg-news">
   <div class="news-wrap">
-    <div class="news-top">
-      <div>
-        <span class="stag" style="display:block;margin-bottom:8px;">Latest Updates</span>
-        <h2 style="font-family:'Orbitron',sans-serif;font-size:clamp(16px,4vw,28px);font-weight:700;letter-spacing:3px;text-transform:uppercase;">KFO News</h2>
-      </div>
-    </div>
-    <div id="news-featured-wrap"></div>
-    <div id="news-grid-wrap"></div>
+    <span class="stag" style="display:block;margin-bottom:8px;">Latest Updates</span>
+    <h2 style="font-family:'Orbitron',sans-serif;font-size:clamp(16px,4vw,28px);font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--tx);margin-bottom:24px;">KFO News</h2>
+    <div id="news-fw"></div>
+    <div id="news-gw"></div>
   </div>
 </div>
-
-
-<!-- MEMBER PROFILE MODAL -->
-<div class="mp-overlay" id="mp-overlay" onclick="mpCloseOverlay(event)">
+<!-- MEMBER MODAL -->
+<div class="mp-overlay" id="mp-ov" onclick="mpCO(event)">
   <div class="mp-box">
-    <div class="mp-hdr">
-      <button class="mp-close" onclick="mpClose()">&#10005; Close</button>
-    </div>
+    <div class="mp-close-row"><button class="mp-close" onclick="mpC()">&#10005; Close</button></div>
     <div class="mp-body">
-      <div class="mp-avatar" id="mp-avatar">PC</div>
-      <div style="text-align:center;">
-        <div class="mp-role-tag" id="mp-role">Founder</div>
-      </div>
-      <div class="mp-name" id="mp-name">Pawan Choudhary</div>
-      <span class="mp-badge" id="mp-badge">KFO - Kala Force Organization</span>
+      <div class="mp-avatar" id="mp-av">PC</div>
+      <div class="mp-role-tag" id="mp-role">Founder</div>
+      <div class="mp-name" id="mp-name">Name</div>
+      <span class="mp-badge" id="mp-badge">KFO</span>
       <div class="mp-divider"></div>
       <div class="mp-bio" id="mp-bio"></div>
-      <div class="mp-achievement" id="mp-achievement" style="display:none;">
-        <div class="mp-ach-icon">&#127942;</div>
-        <div class="mp-ach-text" id="mp-ach-text"></div>
-      </div>
+      <div class="mp-ach" id="mp-ach" style="display:none;"><div class="mp-ach-icon">&#127942;</div><div class="mp-ach-text" id="mp-ach-t"></div></div>
       <div class="mp-ft">KFO &nbsp;|&nbsp; <span>Kala Force Organization</span> &nbsp;|&nbsp; Jodhpur</div>
     </div>
   </div>
 </div>
-
-<footer><p>&#169; 2026 &nbsp;<span>KFO</span>&nbsp; | Kala Force Organization &nbsp;|&nbsp; All Rights Reserved</p></footer>
-</div></div>
-
-<!-- NEWS MODAL - outside all pages, always accessible -->
-<div class="news-modal-overlay" id="news-modal-overlay" onclick="closeNewsModal(event)">
-  <div class="news-modal" id="news-modal">
-    <div class="nm-header">
-      <div>
-        <div id="nm-cat-badge"></div>
-        <div class="nm-title" id="nm-title">-</div>
-      </div>
-      <button class="nm-close" onclick="closeNewsModalDirect()">&#10005; Close</button>
-    </div>
+<!-- NEWS MODAL -->
+<div class="nm-overlay" id="nm-ov" onclick="nmCO(event)">
+  <div class="nm-box">
+    <div class="nm-hdr"><div><div class="nm-cat-tag" id="nm-cat">EVENT</div><div class="nm-t" id="nm-title">Title</div></div><button class="nm-close" onclick="nmC()">&#10005; Close</button></div>
     <div class="nm-body">
-      <span class="nm-icon" id="nm-icon">&#128240;</span>
-      <div class="nm-desc" id="nm-desc">-</div>
-      <div class="nm-info-grid" id="nm-info-grid"></div>
+      <span class="nm-ico" id="nm-icon">&#127881;</span>
+      <div class="nm-full-desc" id="nm-desc"></div>
+      <div class="nm-info-grid" id="nm-info"></div>
     </div>
-    <div class="nm-footer">
-      <div class="nm-footer-txt">KFO &nbsp;|&nbsp; <span>Kala Force Organization</span> &nbsp;|&nbsp; Jodhpur</div>
-    </div>
+    <div class="nm-ft">KFO &nbsp;|&nbsp; <span>Kala Force Organization</span> &nbsp;|&nbsp; Jodhpur</div>
   </div>
 </div>
-
+<!-- KALA AI -->
+<button class="kala-btn" id="kala-btn" onclick="togKala()">
+  <div class="kala-notif" id="kala-notif">AI</div>
+  <div class="kala-btn-lbl">AI</div>
+</button>
+<div class="kala-win" id="kala-win">
+  <div class="kala-hdr">
+    <div class="kala-hdr-l">
+      <div class="kala-av">KA</div>
+      <div><div class="kala-nm">KALA AI</div><div class="kala-st"><div class="kala-dot"></div><span class="kala-st-t">Online — KFO Assistant</span></div></div>
+    </div>
+    <button class="kala-x" onclick="togKala()">&#10005;</button>
+  </div>
+  <div class="kala-msgs" id="kala-msgs"></div>
+  <div class="kala-sugs" id="kala-sugs">
+    <div class="ksug" onclick="kSend('What is KFO?')">About KFO</div>
+    <div class="ksug" onclick="kSend('Who is the founder?')">Founder</div>
+    <div class="ksug" onclick="kSend('How to join KFO?')">Join KFO</div>
+    <div class="ksug" onclick="kSend('KFO contact details')">Contact</div>
+  </div>
+  <div class="kala-inp-row">
+    <input class="kala-inp" id="kala-inp" placeholder="Ask Kala AI anything..." onkeydown="if(event.key==='Enter')kSend()">
+    <button class="kala-send" onclick="kSend()">&#10148;</button>
+  </div>
+  <div class="kala-foot">Powered by Kala AI &bull; KFO</div>
+</div>
+<footer><p>&#169; 2026 &nbsp;<span>KFO</span>&nbsp; | Kala Force Organization &nbsp;|&nbsp; All Rights Reserved</p></footer>
+</div></div>
 <script>
-/* BG CANVAS */
-const cv=document.getElementById('bgc'),cx=cv.getContext('2d'),wp=document.querySelector('.wrap');
-let W,H,pts=[],frame=0;
+var cv=document.getElementById('bgc'),cx=cv.getContext('2d'),wp=document.querySelector('.wrap');
+var W,H,pts=[],fr=0;
 function rsz(){W=cv.width=wp.offsetWidth;H=cv.height=Math.max(wp.scrollHeight,window.innerHeight*3);}
-function iPts(){pts=[];for(let i=0;i<65;i++)pts.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.42,vy:(Math.random()-.5)*.42,r:Math.random()*1.3+.4});}
-function dHex(){const s=30;cx.strokeStyle='rgba(225,48,108,0.04)';cx.lineWidth=.5;for(let r=0;r<=H/(s*1.73)+1;r++)for(let c=0;c<=W/(s*1.5)+1;c++){const px=c*s*1.5,py=r*s*1.73+(c%2?s*.865:0);cx.beginPath();for(let a=0;a<6;a++){const ag=(Math.PI/3)*a-Math.PI/6;a===0?cx.moveTo(px+s*Math.cos(ag),py+s*Math.sin(ag)):cx.lineTo(px+s*Math.cos(ag),py+s*Math.sin(ag));}cx.closePath();cx.stroke();}}
-function dGrid(){cx.strokeStyle='rgba(0,240,255,0.04)';cx.lineWidth=.5;for(let x=0;x<=W;x+=58){cx.beginPath();cx.moveTo(x,0);cx.lineTo(x,H);cx.stroke();}for(let y=0;y<=H;y+=58){cx.beginPath();cx.moveTo(0,y);cx.lineTo(W,y);cx.stroke();}}
-function dCir(){cx.strokeStyle='rgba(0,240,255,0.06)';cx.lineWidth=1;for(let i=0;i<5;i++){const x=((i*190)+frame*.24)%W,y1=H*.28,y2=H*.58;cx.beginPath();cx.moveTo(x,0);cx.lineTo(x,y1);cx.lineTo(x+42,y1);cx.lineTo(x+42,y2);cx.lineTo(x+84,y2);cx.stroke();cx.fillStyle='rgba(0,240,255,0.5)';cx.beginPath();cx.arc(x+42,y1,2.5,0,Math.PI*2);cx.fill();cx.beginPath();cx.arc(x+42,y2,2.5,0,Math.PI*2);cx.fill();}}
-function dPts(){pts.forEach(p=>{p.x+=p.vx;p.y+=p.vy;if(p.x<0)p.x=W;if(p.x>W)p.x=0;if(p.y<0)p.y=H;if(p.y>H)p.y=0;cx.fillStyle='rgba(0,240,255,0.38)';cx.beginPath();cx.arc(p.x,p.y,p.r,0,Math.PI*2);cx.fill();});for(let i=0;i<pts.length;i++)for(let j=i+1;j<pts.length;j++){const dx=pts[i].x-pts[j].x,dy=pts[i].y-pts[j].y,d=Math.sqrt(dx*dx+dy*dy);if(d<105){cx.strokeStyle='rgba(0,240,255,'+(0.11*(1-d/105))+')';cx.lineWidth=.5;cx.beginPath();cx.moveTo(pts[i].x,pts[i].y);cx.lineTo(pts[j].x,pts[j].y);cx.stroke();}}}
-function dScn(){const y=(Math.sin(frame*.007)*.5+.5)*H,g=cx.createLinearGradient(0,y-85,0,y+85);g.addColorStop(0,'transparent');g.addColorStop(.5,'rgba(0,240,255,0.02)');g.addColorStop(1,'transparent');cx.fillStyle=g;cx.fillRect(0,y-85,W,170);}
-function loop(){const nh=Math.max(wp.scrollHeight,window.innerHeight*3);if(Math.abs(nh-H)>60)H=cv.height=nh;cx.clearRect(0,0,W,H);dHex();dGrid();dScn();dCir();dPts();frame++;requestAnimationFrame(loop);}
+function iPts(){pts=[];for(var i=0;i<60;i++)pts.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.4,vy:(Math.random()-.5)*.4,r:Math.random()*1.2+.4});}
+function dHex(){var s=30;cx.strokeStyle='rgba(225,48,108,0.04)';cx.lineWidth=.5;for(var r=0;r<=H/(s*1.73)+1;r++)for(var c=0;c<=W/(s*1.5)+1;c++){var px=c*s*1.5,py=r*s*1.73+(c%2?s*.865:0);cx.beginPath();for(var a=0;a<6;a++){var ag=(Math.PI/3)*a-Math.PI/6;a===0?cx.moveTo(px+s*Math.cos(ag),py+s*Math.sin(ag)):cx.lineTo(px+s*Math.cos(ag),py+s*Math.sin(ag));}cx.closePath();cx.stroke();}}
+function dGrid(){cx.strokeStyle='rgba(0,240,255,0.04)';cx.lineWidth=.5;for(var x=0;x<=W;x+=58){cx.beginPath();cx.moveTo(x,0);cx.lineTo(x,H);cx.stroke();}for(var y=0;y<=H;y+=58){cx.beginPath();cx.moveTo(0,y);cx.lineTo(W,y);cx.stroke();}}
+function dPts(){for(var i=0;i<pts.length;i++){var p=pts[i];p.x+=p.vx;p.y+=p.vy;if(p.x<0)p.x=W;if(p.x>W)p.x=0;if(p.y<0)p.y=H;if(p.y>H)p.y=0;cx.fillStyle='rgba(0,240,255,0.35)';cx.beginPath();cx.arc(p.x,p.y,p.r,0,Math.PI*2);cx.fill();}for(var i=0;i<pts.length;i++)for(var j=i+1;j<pts.length;j++){var dx=pts[i].x-pts[j].x,dy=pts[i].y-pts[j].y,d=Math.sqrt(dx*dx+dy*dy);if(d<100){cx.strokeStyle='rgba(0,240,255,'+(0.1*(1-d/100))+')';cx.lineWidth=.5;cx.beginPath();cx.moveTo(pts[i].x,pts[i].y);cx.lineTo(pts[j].x,pts[j].y);cx.stroke();}}}
+function dScn(){var y=(Math.sin(fr*.007)*.5+.5)*H,g=cx.createLinearGradient(0,y-80,0,y+80);g.addColorStop(0,'transparent');g.addColorStop(.5,'rgba(0,240,255,0.018)');g.addColorStop(1,'transparent');cx.fillStyle=g;cx.fillRect(0,y-80,W,160);}
+function loop(){var nh=Math.max(wp.scrollHeight,window.innerHeight*3);if(Math.abs(nh-H)>60)H=cv.height=nh;cx.clearRect(0,0,W,H);dHex();dGrid();dScn();dPts();fr++;requestAnimationFrame(loop);}
 rsz();iPts();loop();
-window.addEventListener('resize',()=>{rsz();iPts();});
-
-/* REVEAL + COUNTERS */
-const ob=new IntersectionObserver(en=>{en.forEach((e,i)=>{if(e.isIntersecting)setTimeout(()=>e.target.classList.add('on'),i*70);});},{threshold:0.08});
-document.querySelectorAll('.rv').forEach(el=>ob.observe(el));
-function cnt(el){const t=+el.dataset.t,s=el.dataset.s||'',d=t>999?2400:1400,st=Date.now();(function tk(){const p=Math.min((Date.now()-st)/d,1),e=1-Math.pow(1-p,3);el.textContent=Math.round(e*t)+s;if(p<1)requestAnimationFrame(tk);})();}
-const co=new IntersectionObserver(en=>{en.forEach(e=>{if(e.isIntersecting){cnt(e.target);co.unobserve(e.target);}});},{threshold:.5});
-document.querySelectorAll('.sn').forEach(el=>co.observe(el));
-
-/* PAGE NAV */
-function gotoPage(pg,anchor){
-  document.querySelectorAll('.pg[id^="pg-"]').forEach(p=>p.classList.remove('active'));
+window.addEventListener('resize',function(){rsz();iPts();});
+(function(){var e=document.getElementById('kfo-email');if(e){var m='kala2006'+'@'+'gmail.com';e.href='mailto:'+m;e.textContent=m;}})();
+var ob=new IntersectionObserver(function(en){en.forEach(function(e,i){if(e.isIntersecting)setTimeout(function(){e.target.classList.add('on');},i*70);});},{threshold:0.08});
+document.querySelectorAll('.rv').forEach(function(el){ob.observe(el);});
+function cnt(el){var t=+el.dataset.t,s=el.dataset.s||'',d=t>999?2400:1400,st=Date.now();(function tk(){var p=Math.min((Date.now()-st)/d,1),e=1-Math.pow(1-p,3);el.textContent=Math.round(e*t)+s;if(p<1)requestAnimationFrame(tk);})();}
+var co=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){cnt(e.target);co.unobserve(e.target);}});},{threshold:.5});
+document.querySelectorAll('.sn').forEach(function(el){co.observe(el);});
+function gP(pg,anchor){
+  document.querySelectorAll('.pg[id^="pg-"]').forEach(function(p){p.classList.remove('active');});
   document.getElementById('pg-'+pg).classList.add('active');
-  document.querySelectorAll('nav a[id^="n-"]').forEach(a=>a.classList.remove('active-nav'));
-  const n=document.getElementById('n-'+pg);if(n)n.classList.add('active-nav');
+  document.querySelectorAll('nav a[id^="n-"]').forEach(function(a){a.classList.remove('active-nav');});
+  var n=document.getElementById('n-'+pg);if(n)n.classList.add('active-nav');
   window.scrollTo({top:0,behavior:'smooth'});
-  if(anchor)setTimeout(()=>{const el=document.getElementById(anchor);if(el)el.scrollIntoView({behavior:'smooth'});},120);
-  if(pg==='study')renderMats();
-
-(function(){var el=document.getElementById('kfo-email');if(el){var m='kala2006'+'@'+'gmail.com';el.href='mailto:'+m;el.textContent=m;}})();
-  if(pg==='news')renderNews();
-/* MEMBER PROFILES */
-var MEMBERS_PROFILE = {
-  pawan: {
-    name: 'Pawan Choudhary',
-    initials: 'PC',
-    role: 'Founder',
-    badge: 'Founder & Visionary — KFO',
-    bio: 'The visionary behind KFO, leading the foundation of a mission-driven organization with the aim to build a powerful identity and future-ready platform.',
-    achievement: null
-  },
-  piyush: {
-    name: 'Piyush Yadav',
-    initials: 'PY',
-    role: 'Co-Founder',
-    badge: 'Co-Founder — KFO',
-    bio: 'A key pillar in shaping KFO, contributing to its growth, strategy, and long-term vision.',
-    achievement: null
-  },
-  karan: {
-    name: 'Karan Choudhary',
-    initials: 'KC',
-    role: 'Head',
-    badge: 'Organizational Head — KFO',
-    bio: 'Driving KFO with leadership, discipline, and technical excellence. His achievement reflects the strong academic and analytical foundation of our organization.',
-    achievement: 'GATE Qualified — Demonstrating exceptional academic and technical excellence.'
-  },
-  ritesh: {
-    name: 'Ritesh Tolani',
-    initials: 'RT',
-    role: 'Secretary',
-    badge: 'Core Secretary — KFO',
-    bio: 'Recognized for his academic excellence, contributing dedication and structured management to strengthen KFO.',
-    achievement: 'GATE Qualified — Academic excellence and analytical dedication to KFO.'
-  },
-  naveen: {
-    name: 'Naveen Rao',
-    initials: 'NR',
-    role: 'Secretary',
-    badge: 'Core Secretary — KFO',
-    bio: 'Ensuring smooth coordination, management, and execution of KFO activities.',
-    achievement: null
-  }
-};
-
-function openMemberModal(key) {
-  var m = MEMBERS_PROFILE[key];
-  if(!m) return;
-  document.getElementById('mp-avatar').textContent = m.initials;
-  document.getElementById('mp-role').textContent = m.role;
-  document.getElementById('mp-name').textContent = m.name;
-  document.getElementById('mp-badge').textContent = m.badge;
-  document.getElementById('mp-bio').textContent = m.bio;
-  var ach = document.getElementById('mp-achievement');
-  var achText = document.getElementById('mp-ach-text');
-  if(m.achievement) {
-    achText.textContent = m.achievement;
-    ach.style.display = 'flex';
-  } else {
-    ach.style.display = 'none';
-  }
-  document.getElementById('mp-overlay').classList.add('open');
+  if(anchor)setTimeout(function(){var el=document.getElementById(anchor);if(el)el.scrollIntoView({behavior:'smooth'});},120);
+  if(pg==='study')rMats();
+  if(pg==='news')rNews();
 }
-function mpClose() { document.getElementById('mp-overlay').classList.remove('open'); }
-function mpCloseOverlay(e) { if(e.target === document.getElementById('mp-overlay')) mpClose(); }
-document.addEventListener('keydown', function(e){ if(e.key==='Escape'){ mpClose(); nmClose(); } });
-  if(pg==='news')renderNews();
-
-
-}
-function showPS(sc){
-  document.querySelectorAll('#pg-portal .pg').forEach(p=>p.classList.remove('active'));
-  document.getElementById('ps-'+sc).classList.add('active');
-  window.scrollTo({top:0,behavior:'smooth'});
-}
-
-/* MEMBERS */
-const DEF_MEMBERS=[
-  {id:'KFO001',name:'Pawan Choudhary',role:'Founder',college:'Jodhpur University',city:'Jodhpur',mobile:'9880099001',pw:'kfo2024',joined:'Jan 2024'},
-  {id:'KFO002',name:'Piyush Yadav',role:'Co-Founder',college:'Jodhpur University',city:'Jodhpur',mobile:'9880099002',pw:'kfo2024',joined:'Jan 2024'},
-  {id:'KFO003',name:'Karan Choudhary',role:'Head',college:'Jodhpur College',city:'Jodhpur',mobile:'9880099003',pw:'kfo2024',joined:'Feb 2024'},
-  {id:'KFO004',name:'Ritesh Tolani',role:'Secretary',college:'Jodhpur Institute',city:'Jodhpur',mobile:'9880099004',pw:'kfo2024',joined:'Feb 2024'},
-  {id:'KFO005',name:'Naveen Rao',role:'Secretary',college:'Jodhpur Institute',city:'Jodhpur',mobile:'9880099005',pw:'kfo2024',joined:'Mar 2024'},
-];
-function getMems(){try{const d=localStorage.getItem('kfo_members');return d?JSON.parse(d):[...DEF_MEMBERS];}catch(e){return[...DEF_MEMBERS];}}
-function saveMems(m){try{localStorage.setItem('kfo_members',JSON.stringify(m));}catch(e){}}
-let members=getMems(),currentUser=null;
-function initials(n){return n.split(' ').map(w=>w[0]).join('').toUpperCase().slice(0,2);}
-function nextId(){return 'KFO'+String(Math.max(...members.map(m=>parseInt(m.id.replace('KFO',''))))+1).padStart(3,'0');}
-function doSignIn(){const inp=document.getElementById('si-id').value.trim(),pw=document.getElementById('si-pw').value,err=document.getElementById('si-err');const m=members.find(x=>x.id.toLowerCase()===inp.toLowerCase()||x.name.toLowerCase()===inp.toLowerCase());if(!m||m.pw!==pw){err.textContent='Invalid ID or password';err.style.display='block';return;}err.style.display='none';currentUser=m;loadCard(m);showPS('idcard');}
-function doRegister(){const name=document.getElementById('r-name').value.trim(),mobile=document.getElementById('r-mobile').value.trim(),college=document.getElementById('r-college').value.trim(),city=document.getElementById('r-city').value.trim(),role=document.getElementById('r-role').value.trim()||'Member',pw=document.getElementById('r-pw').value,pw2=document.getElementById('r-pw2').value,err=document.getElementById('reg-err');if(!name||!mobile||!college||!city||!pw){err.textContent='Please fill all required fields';err.style.display='block';return;}if(pw!==pw2){err.textContent='Passwords do not match';err.style.display='block';return;}err.style.display='none';const now=new Date();const m={id:nextId(),name,role,college,city,mobile,pw,joined:now.toLocaleString('default',{month:'short'})+' '+now.getFullYear()};members.push(m);saveMems(members);currentUser=m;loadCard(m);showPS('idcard');}
-function loadCard(m){document.getElementById('id-av').textContent=initials(m.name);document.getElementById('id-fn').textContent=m.name.toUpperCase();document.getElementById('id-rl').textContent=m.role;document.getElementById('id-uid').textContent='#'+m.id+' - KFO';document.getElementById('id-cl').textContent=m.college;document.getElementById('id-cy').textContent=m.city;document.getElementById('id-mo').textContent=m.mobile;document.getElementById('id-jo').textContent=m.joined;const bc=document.getElementById('id-bc');bc.innerHTML='';[20,34,24,40,18,32,28,38,22,30,36,20,42,26,34,16,38,24,32,20,36,28,40].forEach(h=>{const b=document.createElement('div');b.className='bar';b.style.cssText='width:'+(Math.random()>.5?'3px':'2px')+';height:'+h+'px';bc.appendChild(b);});}
-function loadMembers(){members=getMems();const g=document.getElementById('mem-grid');g.innerHTML='';members.forEach(m=>{const c=document.createElement('div');c.className='mc';if(currentUser&&m.id===currentUser.id)c.style.borderColor='rgba(0,240,255,0.45)';c.innerHTML='<div class="mc-av">'+initials(m.name)+'</div><div class="mc-name">'+m.name+'</div><div class="mc-role">'+m.role+'</div><div class="mc-id">'+m.id+'</div>';g.appendChild(c);});}
-function signOut(){currentUser=null;document.getElementById('si-id').value='';document.getElementById('si-pw').value='';showPS('signin');}
-document.getElementById('si-pw').addEventListener('keydown',e=>{if(e.key==='Enter')doSignIn();});
-
-/* STUDY */
-const DEF_MATS=[
-  {id:1,title:'Physics Mechanics - Complete Notes',subject:'Physics',cat:'notes',by:'Pawan Choudhary',date:'Jan 2025',url:'https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUGdSuBWm/view'},
-  {id:2,title:'Mathematics Formula Sheet',subject:'Maths',cat:'pdf',by:'Karan Choudhary',date:'Feb 2025',url:'https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUGdSuBWm/view'},
-  {id:3,title:'Chemistry Organic Reactions',subject:'Chemistry',cat:'pdf',by:'Piyush Yadav',date:'Mar 2025',url:'https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUGdSuBWm/view'},
-];
-function getMats(){try{const d=localStorage.getItem('kfo_mats');return d?JSON.parse(d):[...DEF_MATS];}catch(e){return[...DEF_MATS];}}
-function saveMats(m){try{localStorage.setItem('kfo_mats',JSON.stringify(m));}catch(e){}}
-let materials=getMats(),matFilter='all',matId=100;
-function toggleAddPanel(){const p=document.getElementById('add-panel');p.classList.toggle('open');if(p.classList.contains('open'))p.scrollIntoView({behavior:'smooth',block:'nearest'});}
-function setMatFilter(cat,el){matFilter=cat;document.querySelectorAll('.cf').forEach(c=>c.classList.remove('on'));el.classList.add('on');renderMats();}
-function doAddMaterial(){const title=document.getElementById('ap-title').value.trim(),subject=document.getElementById('ap-subject').value.trim(),cat=document.getElementById('ap-cat').value,by=document.getElementById('ap-by').value.trim(),url=document.getElementById('ap-url').value.trim(),err=document.getElementById('ap-err');if(!title||!subject||!by||!url){err.style.display='block';err.textContent='Please fill all fields and add a link';return;}if(!url.startsWith('http')){err.style.display='block';err.textContent='Please enter a valid URL (https://...)';return;}err.style.display='none';const now=new Date();materials.unshift({id:matId++,title,subject,cat,by,date:now.toLocaleString('default',{month:'short'})+' '+now.getFullYear(),url});saveMats(materials);['ap-title','ap-subject','ap-by','ap-url'].forEach(id=>document.getElementById(id).value='');document.getElementById('add-panel').classList.remove('open');renderMats();}
-function deleteMat(id){if(!confirm('Delete this material?'))return;materials=materials.filter(m=>m.id!==id);saveMats(materials);renderMats();}
-function renderMats(){materials=getMats();const q=document.getElementById('mat-search').value.toLowerCase();const list=materials.filter(m=>(matFilter==='all'||m.cat===matFilter)&&(!q||m.title.toLowerCase().includes(q)||m.subject.toLowerCase().includes(q)||m.by.toLowerCase().includes(q)));document.getElementById('st-total').textContent=materials.length;document.getElementById('st-pdf').textContent=materials.filter(m=>m.cat==='pdf').length;document.getElementById('st-notes').textContent=materials.filter(m=>m.cat==='notes').length;document.getElementById('st-video').textContent=materials.filter(m=>m.cat==='video').length;const grid=document.getElementById('mat-grid');if(!list.length){grid.innerHTML='<div class="empty-state"><div class="empty-icon">&#128193;</div><div class="empty-txt">No materials found</div></div>';return;}grid.innerHTML=list.map(m=>'<div class="mat-card"><div class="mat-badge '+m.cat+'">'+m.cat.toUpperCase()+'</div><div class="mat-title">'+m.title+'</div><div class="mat-sub">'+m.subject+'</div><div class="mat-info"><span>By '+m.by+'</span><span>'+m.date+'</span></div><div class="mat-btns"><a class="mbtn" href="'+m.url+'" target="_blank">&#128065; Open</a><a class="mbtn" href="'+m.url+'" target="_blank">&#11015; Download</a></div></div>').join('');}
-renderMats();
-
-(function(){var el=document.getElementById('kfo-email');if(el){var m='kala2006'+'@'+'gmail.com';el.href='mailto:'+m;el.textContent=m;}})();
-
-/* MEMBER PROFILES */
-var MEMBERS_PROFILE = {
-  pawan: {
-    name: 'Pawan Choudhary',
-    initials: 'PC',
-    role: 'Founder',
-    badge: 'Founder & Visionary — KFO',
-    bio: 'The visionary behind KFO, leading the foundation of a mission-driven organization with the aim to build a powerful identity and future-ready platform.',
-    achievement: null
-  },
-  piyush: {
-    name: 'Piyush Yadav',
-    initials: 'PY',
-    role: 'Co-Founder',
-    badge: 'Co-Founder — KFO',
-    bio: 'A key pillar in shaping KFO, contributing to its growth, strategy, and long-term vision.',
-    achievement: null
-  },
-  karan: {
-    name: 'Karan Choudhary',
-    initials: 'KC',
-    role: 'Head',
-    badge: 'Organizational Head — KFO',
-    bio: 'Driving KFO with leadership, discipline, and technical excellence. His achievement reflects the strong academic and analytical foundation of our organization.',
-    achievement: 'GATE Qualified — Demonstrating exceptional academic and technical excellence.'
-  },
-  ritesh: {
-    name: 'Ritesh Tolani',
-    initials: 'RT',
-    role: 'Secretary',
-    badge: 'Core Secretary — KFO',
-    bio: 'Recognized for his academic excellence, contributing dedication and structured management to strengthen KFO.',
-    achievement: 'GATE Qualified — Academic excellence and analytical dedication to KFO.'
-  },
-  naveen: {
-    name: 'Naveen Rao',
-    initials: 'NR',
-    role: 'Secretary',
-    badge: 'Core Secretary — KFO',
-    bio: 'Ensuring smooth coordination, management, and execution of KFO activities.',
-    achievement: null
-  }
-};
-
-function openMemberModal(key) {
-  var m = MEMBERS_PROFILE[key];
-  if(!m) return;
-  document.getElementById('mp-avatar').textContent = m.initials;
-  document.getElementById('mp-role').textContent = m.role;
-  document.getElementById('mp-name').textContent = m.name;
-  document.getElementById('mp-badge').textContent = m.badge;
-  document.getElementById('mp-bio').textContent = m.bio;
-  var ach = document.getElementById('mp-achievement');
-  var achText = document.getElementById('mp-ach-text');
-  if(m.achievement) {
-    achText.textContent = m.achievement;
-    ach.style.display = 'flex';
-  } else {
-    ach.style.display = 'none';
-  }
-  document.getElementById('mp-overlay').classList.add('open');
-}
-function mpClose() { document.getElementById('mp-overlay').classList.remove('open'); }
-function mpCloseOverlay(e) { if(e.target === document.getElementById('mp-overlay')) mpClose(); }
-document.addEventListener('keydown', function(e){ if(e.key==='Escape'){ mpClose(); nmClose(); } });
-
-/* NEWS DATA */
-const CAT_ICONS={event:'&#127881;',announcement:'&#128227;',update:'&#128260;',news:'&#128240;'};
-const ALL_NEWS=[
-  {id:1,title:'KFO Party — Polish Line Road',cat:'event',desc:'KFO is proud to announce its first-ever members party! All KFO members are invited to celebrate brotherhood and unity at a special gathering near Polish Line Road, Jodhpur. Food, fun, and great memories await. Stay connected on Instagram for the exact date and time.',by:'KFO Admin',loc:'Polish Line Road, Jodhpur',date:'20 Mar 2026',featured:true},
-  {id:2,title:'KFO Meeting for Future Planning',cat:'announcement',desc:'Yesterday, KFO held a productive meeting focused on future planning and the growth of the organization. All members came together to discuss upcoming events and new initiatives. After the meeting, all members enjoyed the blockbuster movie Dhurender together at Blue Cinema Hall — a perfect blend of planning and celebration!',by:'KFO Admin',loc:'Blue Cinema Hall, Jodhpur',  date:' 20 Mar 2026',featured:false}
-];
-
-function renderNews(){
-  const featured=ALL_NEWS.find(n=>n.featured);
-  const rest=ALL_NEWS.filter(n=>!n.featured);
-  const fw=document.getElementById('news-featured-wrap');
-  if(featured){
-    fw.innerHTML='<div class="news-featured" onclick="openNewsModal('+featured.id+')"><div class="nf-inner"><div class="nf-badge"><div class="nf-dot"></div>Latest News &nbsp;&nbsp;<span style="color:var(--cyan);font-size:9px;letter-spacing:2px;">Tap to read &rarr;</span></div><div class="nf-title">'+featured.title+'</div><div class="nf-desc">'+(featured.desc.length>160?featured.desc.slice(0,160)+'...':featured.desc)+'</div><div class="nf-meta"><span>&#128197; '+featured.date+'</span>'+(featured.loc?'<span>&#128205; '+featured.loc+'</span>':'')+'<span>By '+featured.by+'</span></div></div></div>';
-  } else { fw.innerHTML=''; }
-  const gw=document.getElementById('news-grid-wrap');
-  if(!rest.length){gw.innerHTML='';return;}
-  gw.innerHTML='<div class="news-grid">'+rest.map(n=>'<div class="news-card" onclick="openNewsModal('+n.id+')"><div class="news-img">'+(CAT_ICONS[n.cat]||'&#128240;')+'</div><div class="news-body"><div class="news-cat '+n.cat+'">'+n.cat.toUpperCase()+'</div><div class="news-title">'+n.title+'</div><div class="news-desc">'+(n.desc.length>110?n.desc.slice(0,110)+'...':n.desc)+'</div><div class="news-meta">&#128197; '+n.date+(n.loc?' &nbsp;&#128205; '+n.loc:'')+'</div><span class="news-read">Read full story &rarr;</span></div></div>').join('')+'</div>';
-}
-
-function openNewsModal(id){
-  const n=ALL_NEWS.find(x=>x.id===id);
-  if(!n)return;
-  const badge=document.getElementById('nm-cat-badge');
-  badge.className='nm-cat-badge '+n.cat;
-  badge.textContent=n.cat.toUpperCase();
-  document.getElementById('nm-title').textContent=n.title;
-  document.getElementById('nm-icon').innerHTML=CAT_ICONS[n.cat]||'&#128240;';
-  document.getElementById('nm-desc').textContent=n.desc;
-  let info='<div class="nm-info-item"><div class="nm-info-lbl">Date</div><div class="nm-info-val">&#128197; '+n.date+'</div></div>';
-  info+='<div class="nm-info-item"><div class="nm-info-lbl">Posted By</div><div class="nm-info-val">'+n.by+'</div></div>';
-  if(n.loc)info+='<div class="nm-info-item"><div class="nm-info-lbl">Location</div><div class="nm-info-val">&#128205; '+n.loc+'</div></div>';
-  info+='<div class="nm-info-item"><div class="nm-info-lbl">Category</div><div class="nm-info-val">'+n.cat.charAt(0).toUpperCase()+n.cat.slice(1)+'</div></div>';
-  document.getElementById('nm-info-grid').innerHTML=info;
-  document.getElementById('news-modal-overlay').classList.add('open');
-  document.body.style.overflow='hidden';
-}
-function closeNewsModal(e){if(e.target===document.getElementById('news-modal-overlay'))closeNewsModalDirect();}
-function closeNewsModalDirect(){document.getElementById('news-modal-overlay').classList.remove('open');document.body.style.overflow='';}
-document.addEventListener('keydown',e=>{if(e.key==='Escape')closeNewsModalDirect();});
+function sPS(sc){document.querySelectorAll('#pg-portal .pg').forEach(function(p){p.classList.remove('active');});document.getElementById('ps-'+sc).classList.add('active');window.scrollTo({top:0,behavior:'smooth'});}
+var DM=[{id:'KFO001',name:'Pawan Choudhary',role:'Founder',college:'Jodhpur University',city:'Jodhpur',mobile:'9880099001',pw:'kfo2024',joined:'Jan 2024'},{id:'KFO002',name:'Piyush Yadav',role:'Co-Founder',college:'Jodhpur University',city:'Jodhpur',mobile:'9880099002',pw:'kfo2024',joined:'Jan 2024'},{id:'KFO003',name:'Karan Choudhary',role:'Head',college:'Jodhpur College',city:'Jodhpur',mobile:'9880099003',pw:'kfo2024',joined:'Feb 2024'},{id:'KFO004',name:'Ritesh Tolani',role:'Secretary',college:'Jodhpur Institute',city:'Jodhpur',mobile:'9880099004',pw:'kfo2024',joined:'Feb 2024'},{id:'KFO005',name:'Naveen Rao',role:'Secretary',college:'Jodhpur Institute',city:'Jodhpur',mobile:'9880099005',pw:'kfo2024',joined:'Mar 2024'}];
+function gMems(){try{var d=localStorage.getItem('kfo_members');return d?JSON.parse(d):DM.slice();}catch(e){return DM.slice();}}
+function svMems(m){try{localStorage.setItem('kfo_members',JSON.stringify(m));}catch(e){}}
+var members=gMems(),curUser=null;
+function ini(n){return n.split(' ').map(function(w){return w[0];}).join('').toUpperCase().slice(0,2);}
+function nxtId(){return 'KFO'+String(Math.max.apply(null,members.map(function(m){return parseInt(m.id.replace('KFO',''));}))+1).padStart(3,'0');}
+function doSI(){var inp=document.getElementById('si-id').value.trim(),pw=document.getElementById('si-pw').value,err=document.getElementById('si-err');var m=members.find(function(x){return x.id.toLowerCase()===inp.toLowerCase()||x.name.toLowerCase()===inp.toLowerCase();});if(!m||m.pw!==pw){err.textContent='Invalid ID or password';err.style.display='block';return;}err.style.display='none';curUser=m;lCard(m);sPS('idcard');}
+function doReg(){var name=document.getElementById('r-name').value.trim(),mob=document.getElementById('r-mobile').value.trim(),col=document.getElementById('r-college').value.trim(),city=document.getElementById('r-city').value.trim(),role=document.getElementById('r-role').value.trim()||'Member',pw=document.getElementById('r-pw').value,pw2=document.getElementById('r-pw2').value,err=document.getElementById('reg-err');if(!name||!mob||!col||!city||!pw){err.textContent='Fill all required fields';err.style.display='block';return;}if(pw!==pw2){err.textContent='Passwords do not match';err.style.display='block';return;}err.style.display='none';var now=new Date();var m={id:nxtId(),name:name,role:role,college:col,city:city,mobile:mob,pw:pw,joined:now.toLocaleString('default',{month:'short'})+' '+now.getFullYear()};members.push(m);svMems(members);curUser=m;lCard(m);sPS('idcard');}
+function lCard(m){document.getElementById('id-av').textContent=ini(m.name);document.getElementById('id-fn').textContent=m.name.toUpperCase();document.getElementById('id-rl').textContent=m.role;document.getElementById('id-uid').textContent='#'+m.id+' - KFO';document.getElementById('id-cl').textContent=m.college;document.getElementById('id-cy').textContent=m.city;document.getElementById('id-mo').textContent=m.mobile;document.getElementById('id-jo').textContent=m.joined;var bc=document.getElementById('id-bc');bc.innerHTML='';[20,34,24,40,18,32,28,38,22,30,36,20,42,26,34,16,38,24].forEach(function(h){var b=document.createElement('div');b.className='bar';b.style.cssText='width:'+(Math.random()>.5?'3px':'2px')+';height:'+h+'px';bc.appendChild(b);});}
+function loadMems(){members=gMems();var g=document.getElementById('mem-grid');g.innerHTML='';members.forEach(function(m){var c=document.createElement('div');c.className='mc';if(curUser&&m.id===curUser.id)c.style.borderColor='rgba(0,240,255,0.45)';c.innerHTML='<div class="mc-av">'+ini(m.name)+'</div><div class="mc-name">'+m.name+'</div><div class="mc-role">'+m.role+'</div><div class="mc-id">'+m.id+'</div>';g.appendChild(c);});}
+function signOut(){curUser=null;document.getElementById('si-id').value='';document.getElementById('si-pw').value='';sPS('signin');}
+document.getElementById('si-pw').addEventListener('keydown',function(e){if(e.key==='Enter')doSI();});
+var DMATS=[{id:1,title:'Physics Mechanics - Complete Notes',subject:'Physics',cat:'notes',by:'Pawan Choudhary',date:'Jan 2025',url:'https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUGdSuBWm/view'},{id:2,title:'Mathematics Formula Sheet',subject:'Maths',cat:'pdf',by:'Karan Choudhary',date:'Feb 2025',url:'https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUGdSuBWm/view'},{id:3,title:'Chemistry Organic Reactions',subject:'Chemistry',cat:'pdf',by:'Piyush Yadav',date:'Mar 2025',url:'https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUGdSuBWm/view'}];
+function gMats(){try{var d=localStorage.getItem('kfo_mats');return d?JSON.parse(d):DMATS.slice();}catch(e){return DMATS.slice();}}
+function svMats(m){try{localStorage.setItem('kfo_mats',JSON.stringify(m));}catch(e){}}
+var mats=gMats(),mF='all',mId=100;
+function togAP(){var p=document.getElementById('add-panel');p.classList.toggle('open');if(p.classList.contains('open'))p.scrollIntoView({behavior:'smooth',block:'nearest'});}
+function sMF(cat,el){mF=cat;document.querySelectorAll('.cf').forEach(function(c){c.classList.remove('on');});el.classList.add('on');rMats();}
+function doAddMat(){var ti=document.getElementById('ap-title').value.trim(),su=document.getElementById('ap-subject').value.trim(),ca=document.getElementById('ap-cat').value,by=document.getElementById('ap-by').value.trim(),url=document.getElementById('ap-url').value.trim(),err=document.getElementById('ap-err');if(!ti||!su||!by||!url){err.style.display='block';err.textContent='Fill all fields';return;}if(!url.startsWith('http')){err.style.display='block';err.textContent='Enter a valid URL';return;}err.style.display='none';var now=new Date();mats.unshift({id:mId++,title:ti,subject:su,cat:ca,by:by,date:now.toLocaleString('default',{month:'short'})+' '+now.getFullYear(),url:url});svMats(mats);['ap-title','ap-subject','ap-by','ap-url'].forEach(function(id){document.getElementById(id).value='';});document.getElementById('add-panel').classList.remove('open');rMats();}
+function rMats(){mats=gMats();var q=document.getElementById('mat-search').value.toLowerCase();var list=mats.filter(function(m){return(mF==='all'||m.cat===mF)&&(!q||m.title.toLowerCase().includes(q)||m.subject.toLowerCase().includes(q)||m.by.toLowerCase().includes(q));});document.getElementById('st-total').textContent=mats.length;document.getElementById('st-pdf').textContent=mats.filter(function(m){return m.cat==='pdf';}).length;document.getElementById('st-notes').textContent=mats.filter(function(m){return m.cat==='notes';}).length;document.getElementById('st-video').textContent=mats.filter(function(m){return m.cat==='video';}).length;var g=document.getElementById('mat-grid');if(!list.length){g.innerHTML='<div class="empty-state"><div class="empty-icon">&#128193;</div><div class="empty-txt">No materials found</div></div>';return;}g.innerHTML=list.map(function(m){return'<div class="mat-card"><div class="mat-badge '+m.cat+'">'+m.cat.toUpperCase()+'</div><div class="mat-title">'+m.title+'</div><div class="mat-sub">'+m.subject+'</div><div class="mat-info"><span>By '+m.by+'</span><span>'+m.date+'</span></div><div class="mat-btns"><a class="mbtn" href="'+m.url+'" target="_blank">&#128065; Open</a><a class="mbtn" href="'+m.url+'" target="_blank">&#11015; Download</a></div></div>';}).join('');}
+rMats();
+var ND=[{id:1,title:'KFO Party — Polish Line Road',cat:'event',icon:'&#127881;',desc:'KFO is proud to announce its first-ever members party! All KFO members are invited to celebrate brotherhood and unity at a special gathering near Polish Line Road, Jodhpur. Food, fun, and great memories await. Stay connected on Instagram for the exact date and time.',by:'KFO Admin',loc:'Polish Line Road, Jodhpur',date:'Mar 2026',featured:true},{id:2,title:'KFO Meeting & Movie at Blue Cinema Hall',cat:'announcement',icon:'&#128227;',desc:'Yesterday, KFO held a productive meeting focused on future planning and the growth of the organization. All members came together to discuss upcoming events and new initiatives. After the meeting, all members enjoyed the blockbuster movie Dhurender together at Blue Cinema Hall — a perfect blend of planning and celebration!',by:'KFO Admin',loc:'Blue Cinema Hall, Jodhpur',date:'Mar 2026',featured:false}];
+function rNews(){var fw=document.getElementById('news-fw'),gw=document.getElementById('news-gw'),feat=null,rest=[];for(var i=0;i<ND.length;i++){if(ND[i].featured)feat=ND[i];else rest.push(ND[i]);}if(feat){fw.innerHTML='<div class="news-featured" onclick="nmO('+feat.id+')">'+'<div class="nf-inner"><div class="nf-badge"><div class="nf-dot"></div>&nbsp;Latest News&nbsp;&nbsp;<span style="color:var(--cyan);font-size:9px;">Tap to read &rarr;</span></div><div class="nf-title">'+feat.title+'</div><div class="nf-desc">'+(feat.desc.length>160?feat.desc.slice(0,160)+'...':feat.desc)+'</div><div class="nf-meta"><span>&#128197; '+feat.date+'</span><span style="color:var(--mt);font-family:Rajdhani,sans-serif;font-size:12px;">By '+feat.by+'</span>'+(feat.loc?'<span>&#128205; '+feat.loc+'</span>':'')+'</div></div></div>';}else{fw.innerHTML='';}if(rest.length){var h='<div class="news-grid">';for(var j=0;j<rest.length;j++){var n=rest[j];h+='<div class="news-card" onclick="nmO('+n.id+')">'+'<div class="news-img">'+n.icon+'</div><div class="news-body"><div class="news-cat '+n.cat+'">'+n.cat.toUpperCase()+'</div><div class="news-title">'+n.title+'</div><div class="news-desc">'+(n.desc.length>110?n.desc.slice(0,110)+'...':n.desc)+'</div><div class="news-foot"><span class="news-by">By '+n.by+'</span><span class="news-read">Read &rarr;</span></div></div></div>';}h+='</div>';gw.innerHTML=h;}else{gw.innerHTML='';}}
+function nmO(id){var n=null;for(var i=0;i<ND.length;i++){if(ND[i].id==id){n=ND[i];break;}}if(!n)return;var ct=document.getElementById('nm-cat');ct.className='nm-cat-tag '+n.cat;ct.textContent=n.cat.toUpperCase();document.getElementById('nm-title').textContent=n.title;document.getElementById('nm-icon').innerHTML=n.icon;document.getElementById('nm-desc').textContent=n.desc;var info='<div class="nm-item"><div class="nm-lbl">Date</div><div class="nm-val">&#128197; '+n.date+'</div></div>';info+='<div class="nm-item"><div class="nm-lbl">Posted By</div><div class="nm-val">'+n.by+'</div></div>';if(n.loc)info+='<div class="nm-item"><div class="nm-lbl">Location</div><div class="nm-val">&#128205; '+n.loc+'</div></div>';info+='<div class="nm-item"><div class="nm-lbl">Category</div><div class="nm-val">'+n.cat.charAt(0).toUpperCase()+n.cat.slice(1)+'</div></div>';document.getElementById('nm-info').innerHTML=info;document.getElementById('nm-ov').classList.add('open');}
+function nmC(){document.getElementById('nm-ov').classList.remove('open');}
+function nmCO(e){if(e.target===document.getElementById('nm-ov'))nmC();}
+var MP={pawan:{name:'Pawan Choudhary',ini:'PC',role:'Founder',badge:'Founder & Visionary — KFO',bio:'The visionary behind KFO, leading the foundation of a mission-driven organization with the aim to build a powerful identity and future-ready platform.',ach:null},piyush:{name:'Piyush Yadav',ini:'PY',role:'Co-Founder',badge:'Co-Founder — KFO',bio:'A key pillar in shaping KFO, contributing to its growth, strategy, and long-term vision.',ach:null},karan:{name:'Karan Choudhary',ini:'KC',role:'Head',badge:'Organizational Head — KFO',bio:'Driving KFO with leadership, discipline, and technical excellence. His achievement reflects the strong academic and analytical foundation of our organization.',ach:'GATE Qualified — Exceptional academic and technical excellence.'},ritesh:{name:'Ritesh Tolani',ini:'RT',role:'Secretary',badge:'Core Secretary — KFO',bio:'Recognized for his academic excellence, contributing dedication and structured management to strengthen KFO.',ach:'GATE Qualified — Academic excellence and analytical dedication to KFO.'},naveen:{name:'Naveen Rao',ini:'NR',role:'Secretary',badge:'Core Secretary — KFO',bio:'Ensuring smooth coordination, management, and execution of KFO activities.',ach:null}};
+function oMP(k){var m=MP[k];if(!m)return;document.getElementById('mp-av').textContent=m.ini;document.getElementById('mp-role').textContent=m.role;document.getElementById('mp-name').textContent=m.name;document.getElementById('mp-badge').textContent=m.badge;document.getElementById('mp-bio').textContent=m.bio;var a=document.getElementById('mp-ach');if(m.ach){document.getElementById('mp-ach-t').textContent=m.ach;a.style.display='flex';}else{a.style.display='none';}document.getElementById('mp-ov').classList.add('open');}
+function mpC(){document.getElementById('mp-ov').classList.remove('open');}
+function mpCO(e){if(e.target===document.getElementById('mp-ov'))mpC();}
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){mpC();nmC();kalaClose();}});
+var kalaIsOpen=false,kalaGreeted=false;
+var KB=[{q:['what is kfo','about kfo','kfo kya hai','tell me about kfo'],a:'KFO — Kala Force Organization — is a student organization based in Jodhpur, Rajasthan. Founded in 2024, KFO is built on the values of unity, brotherhood, discipline, and student power. We capture college memories and build a strong community together.'},{q:['founder','pawan','pawan choudhary','who founded'],a:'KFO was founded by Pawan Choudhary — the visionary leader who built KFO with the mission to create a powerful identity and future-ready platform for students in Jodhpur.'},{q:['co-founder','piyush','piyush yadav'],a:'Piyush Yadav is the Co-Founder of KFO. He is a key pillar in shaping the organization, contributing to its growth, strategy, and long-term vision.'},{q:['head','karan','karan choudhary'],a:'Karan Choudhary is the Head of KFO. He drives the organization with leadership, discipline, and technical excellence. He is also GATE Qualified!'},{q:['secretary','ritesh','ritesh tolani'],a:'Ritesh Tolani is a Core Secretary of KFO. He is GATE Qualified and contributes dedication and structured management to strengthen KFO.'},{q:['naveen','naveen rao'],a:'Naveen Rao is a Core Secretary of KFO, ensuring smooth coordination, management, and execution of KFO activities.'},{q:['join','how to join','membership','kaise join'],a:'To join KFO:\n1. Contact us via Instagram or Email\n2. Clear the physical examination\n3. Reservations for SC/ST/OBC\n4. Welcome to KFO!'},{q:['contact','email','mobile','phone','number'],a:'KFO Contact:\n📧 kala2006@gmail.com\n📱 7877320103\n📍 Jodhpur, Rajasthan\n📸 @thekalaforceofficial__'},{q:['instagram','social','insta'],a:'Follow KFO on Instagram: @thekalaforceofficial__ for all latest updates and moments!'},{q:['location','where','jodhpur','rajasthan'],a:'KFO is based in Jodhpur, Rajasthan, India — the Blue City! Founded in 2024.'},{q:['news','latest','update','event','party','meeting'],a:'Check the News tab for latest KFO updates! Recent: KFO party near Polish Line Road and a planning meeting + Dhurender movie at Blue Cinema Hall!'},{q:['study','material','notes','pdf'],a:'KFO has a Study Material section with PDFs, notes, and resources. Click the Study tab to explore!'},{q:['portal','id card','member id','login'],a:'The KFO Member Portal gives you a digital ID card. Sign in or register in the Portal tab!'},{q:['gate','qualified','achievement'],a:'KFO has GATE Qualified members! Karan Choudhary (Head) and Ritesh Tolani (Secretary) are both GATE Qualified!'},{q:['members','how many','total','team'],a:'KFO has 20+ active members! Key team: Pawan Choudhary (Founder), Piyush Yadav (Co-Founder), Karan Choudhary (Head), Ritesh Tolani & Naveen Rao (Secretaries).'},{q:['hello','hi','hey','namaste','hii'],a:'Hello! I am Kala AI, your KFO assistant. Ask me anything about KFO — members, joining, events, contact and more!'},{q:['thanks','thank you','shukriya'],a:'You are welcome! Feel free to ask anything about KFO anytime!'},{q:['bye','goodbye','ok bye'],a:'Goodbye! Follow KFO on Instagram @thekalaforceofficial__ for updates. Jai KFO!'}];
+function kMatch(txt){txt=txt.toLowerCase().trim();for(var i=0;i<KB.length;i++){for(var j=0;j<KB[i].q.length;j++){if(txt===KB[i].q[j]||txt.includes(KB[i].q[j])||KB[i].q[j].includes(txt))return KB[i].a;}}var best=null,bs=0;var words=txt.split(' ');for(var w=0;w<words.length;w++){if(words[w].length<3)continue;for(var i=0;i<KB.length;i++){for(var j=0;j<KB[i].q.length;j++){if(KB[i].q[j].includes(words[w])&&words[w].length>bs){bs=words[w].length;best=KB[i].a;}}}}return best;}
+function kAddMsg(txt,who){var msgs=document.getElementById('kala-msgs');var d=document.createElement('div');d.className='km '+who;var av=document.createElement('div');av.className='km-av';av.textContent=who==='bot'?'KA':'👤';var b=document.createElement('div');b.className='km-b';b.style.whiteSpace='pre-line';b.textContent=txt;d.appendChild(av);d.appendChild(b);msgs.appendChild(d);msgs.scrollTop=msgs.scrollHeight;}
+function kShowTyping(){var msgs=document.getElementById('kala-msgs');var d=document.createElement('div');d.className='kala-typing-wrap';d.id='kala-typ';var av=document.createElement('div');av.className='km-av';av.style.cssText='width:24px;height:24px;border-radius:50%;background:rgba(0,240,255,0.1);border:1px solid rgba(0,240,255,0.25);display:flex;align-items:center;justify-content:center;font-family:Orbitron,sans-serif;font-size:6px;color:var(--cyan);flex-shrink:0;';av.textContent='KA';var t=document.createElement('div');t.className='kala-typing';t.innerHTML='<span></span><span></span><span></span>';d.appendChild(av);d.appendChild(t);msgs.appendChild(d);msgs.scrollTop=msgs.scrollHeight;}
+function kRemTyping(){var el=document.getElementById('kala-typ');if(el)el.remove();}
+function kSend(ov){var inp=document.getElementById('kala-inp');var txt=ov||inp.value.trim();if(!txt)return;inp.value='';document.getElementById('kala-sugs').style.display='none';kAddMsg(txt,'user');kShowTyping();setTimeout(function(){kRemTyping();var rep=kMatch(txt);if(!rep)rep="I'm not sure about that! Try asking about KFO members, how to join, contact details, or recent events.";kAddMsg(rep,'bot');},700+Math.random()*500);}
+function togKala(){kalaIsOpen=!kalaIsOpen;var win=document.getElementById('kala-win');var notif=document.getElementById('kala-notif');if(kalaIsOpen){win.classList.add('open');notif.style.display='none';if(!kalaGreeted){kalaGreeted=true;setTimeout(function(){kAddMsg('Jai KFO! I am Kala AI, your KFO assistant. Ask me anything about Kala Force Organization!','bot');},300);}setTimeout(function(){document.getElementById('kala-inp').focus();},400);}else{win.classList.remove('open');}}
+function kalaClose(){kalaIsOpen=false;document.getElementById('kala-win').classList.remove('open');}
+rNews();
 </script>
 </body>
 </html>
